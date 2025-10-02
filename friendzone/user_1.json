@@ -1,0 +1,49 @@
+{
+    "user_id": "user_001",
+    "memories": [
+        {
+            "memory_id": "user_001_m01",
+            "session_id": "session_u100",
+            "summary": "On July 15, 2024, near Golden Gate Park in San Francisco, John and his sister Anna set up a picnic blanket outdoors.",
+            "when": "2024-07-15",
+            "who": ["John Lee", "Anna Lee"],
+            "where": ["Golden Gate Park, San Francisco, CA"],
+            "what": "Setting up a picnic blanket together before the picnic began."
+        },
+        {
+            "memory_id": "user_001_m02",
+            "session_id": "session_u100",
+            "summary": "On July 15, 2024, at Golden Gate Park, Anna poured orange juice while John took a selfie during a brunch picnic.",
+            "when": "2024-07-15",
+            "who": ["Anna Lee", "John Lee"],
+            "where": ["Golden Gate Park, San Francisco, CA"],
+            "what": "Anna pouring orange juice. John taking a selfie. Clarified as a brunch picnic.",
+            "image_url": "",
+            "conversation": [
+                { "user": "We had brunch food, not lunch." },
+                { "assistant": "Updated: this is brunch picnic." }
+            ],
+            "created_at": "2025-10-02 09:00:00",
+            "updated_at": "2025-10-02 09:00:00",
+            "save_memory": true,
+            "show_summary": true
+        },
+        {
+            "memory_id": "user_001_m03",
+            "session_id": "session_u100",
+            "summary": "On July 15, 2024, at Golden Gate Park's rose garden, John's friend Miguel arrived and joined John and Anna.",
+            "when": "2024-07-15",
+            "who": ["John Lee", "Anna Lee", "Miguel Torres"],
+            "where": ["Golden Gate Park, San Francisco, CA"],
+            "what": "Friends gathering near the rose garden. Miguel arrived around 12:30 after work.",
+            "image_url": "",
+            "conversation": [
+                { "user": "Miguel showed up around 12:30 after work." }
+            ],
+            "created_at": "2025-10-02 09:00:00",
+            "updated_at": "2025-10-02 09:00:00",
+            "save_memory": true,
+            "show_summary": true
+        }
+    ]
+}
