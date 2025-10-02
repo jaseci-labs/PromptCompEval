@@ -1,0 +1,59 @@
+# Default benchmark configuration for PromptCompEval
+
+# Techniques to evaluate
+techniques:
+  - name: original
+    description: Original prompt without compilation
+    enabled: true
+    
+  - name: byLLM
+    description: Prompt compiled by LLM
+    enabled: true
+    config:
+      model: gpt-4
+      temperature: 0.7
+      
+  - name: optimized
+    description: Hand-optimized prompt
+    enabled: true
+    
+  - name: compressed
+    description: Compressed prompt using token reduction
+    enabled: true
+    config:
+      compression_ratio: 0.7
+
+# Datasets to use for evaluation
+datasets:
+  - name: dataset1
+    path: benchmarks/data/dataset1.json
+    description: Sample dataset 1
+    size: 100
+    
+  - name: dataset2
+    path: benchmarks/data/dataset2.json
+    description: Sample dataset 2
+    size: 100
+
+# Evaluation metrics
+metrics:
+  - accuracy
+  - latency
+  - token_count
+  - cost
+  - f1_score
+  - rouge_score
+
+# Model configuration
+models:
+  default_model: gpt-3.5-turbo
+  backup_model: gpt-4
+  temperature: 0.7
+  max_tokens: 2048
+
+# Output configuration
+output:
+  results_dir: benchmarks/results
+  logs_dir: benchmarks/logs
+  save_individual_results: true
+  generate_plots: true
