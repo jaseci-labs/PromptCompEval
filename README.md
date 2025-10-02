@@ -2,6 +2,11 @@
 
 Evaluation Methodology, Benchmarks and Datasets for Prompt Compilation Frameworks for AI-Integration
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+
+> **Quick Start**: See [QUICKSTART.md](QUICKSTART.md) for a fast introduction to running benchmarks.
+
 ## Overview
 
 PromptCompEval is an evaluation framework for comparing different prompt compilation techniques such as byLLM, optimized prompts, and compressed prompts. The framework provides tools to benchmark these techniques across various metrics including accuracy, latency, token count, and cost.
@@ -189,7 +194,7 @@ make type-check
 
 ## License
 
-[Add license information here]
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Citation
 
