@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "prompt": "Translate the following English text to French: 'Hello, how are you?'",
+    "expected_output": "Bonjour, comment allez-vous?",
+    "category": "translation"
+  },
+  {
+    "id": 2,
+    "prompt": "Summarize the following text in one sentence: 'Artificial intelligence is transforming industries worldwide by automating tasks and enabling new capabilities.'",
+    "expected_output": "AI is revolutionizing global industries through automation and innovation.",
+    "category": "summarization"
+  },
+  {
+    "id": 3,
+    "prompt": "Extract the key entities from this text: 'Apple Inc. announced a new product launch in San Francisco next month.'",
+    "expected_output": "Entities: Apple Inc. (Organization), San Francisco (Location), next month (Time)",
+    "category": "entity_extraction"
+  },
+  {
+    "id": 4,
+    "prompt": "Classify the sentiment of this review: 'This product exceeded my expectations. Highly recommend!'",
+    "expected_output": "Positive",
+    "category": "sentiment_analysis"
+  },
+  {
+    "id": 5,
+    "prompt": "Answer this question: 'What is the capital of France?'",
+    "expected_output": "Paris",
+    "category": "question_answering"
+  }
+]
