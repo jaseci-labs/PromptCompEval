@@ -3,115 +3,114 @@
   "memories": [
     {
       "memory_id": "m01",
-      "summary": "Lena and her friends set up umbrellas and towels on the grass.",
-      "when": "2025-10-01",
-      "who": ["Lena", "Rachel", "David"],
+      "summary": "On February 1, 2025, in Ann Arbor, Lena studied at her apartment desk, a cup of tea beside her laptop, with snow outside the window.",
+      "when": "2025-02-01",
+      "who": ["Lena"],
       "where": ["Ann Arbor, MI"],
-      "what": "Preparing their spot before activities began."
+      "what": "Studying at home."
     },
     {
       "memory_id": "m02",
-      "summary": "Rachel unpacked snacks while David set up a frisbee game.",
-      "when": "2025-10-01",
-      "who": ["Rachel", "David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Food unpacking and game setup."
+      "summary": "On March 12, 2025, in Detroit, Lena and her friend Rachel posed together at a small art gallery opening.",
+      "when": "2025-03-12",
+      "who": ["Lena", "Rachel"],
+      "where": ["Detroit, MI"],
+      "what": "Art gallery visit."
     },
     {
       "memory_id": "m03",
-      "summary": "Lena and Rachel played frisbee with David.",
-      "when": "2025-10-01",
-      "who": ["Lena", "Rachel", "David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Friendly frisbee game."
+      "summary": "On April 9, 2025, in Chicago, Lena enjoyed a sunny afternoon with David at Millennium Park, smiling near Cloud Gate.",
+      "when": "2025-04-09",
+      "who": ["Lena", "David"],
+      "where": ["Chicago, IL"],
+      "what": "Sightseeing trip."
     },
     {
       "memory_id": "m04",
-      "summary": "After playing, the group cooled off by walking near the river.",
-      "when": "2025-10-01",
-      "who": ["Lena", "Rachel", "David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Relaxing by the river."
+      "summary": "On May 20, 2025, in Boston, Lena joined her cousin Julia for brunch outdoors, their table full of pancakes and orange juice.",
+      "when": "2025-05-20",
+      "who": ["Lena", "Julia"],
+      "where": ["Boston, MA"],
+      "what": "Brunch with family."
     },
     {
       "memory_id": "m05",
-      "summary": "While walking, David dropped his water bottle into the river.",
-      "when": "2025-10-01",
-      "who": ["David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Small mishap near the water."
+      "summary": "On June 28, 2025, in San Francisco, Lena walked with Omar across the Golden Gate Bridge, fog swirling in the background.",
+      "when": "2025-06-28",
+      "who": ["Lena", "Omar"],
+      "where": ["San Francisco, CA"],
+      "what": "Golden Gate walk."
     },
     {
       "memory_id": "m06",
-      "summary": "Rachel shared a funny story about her road trip last month.",
-      "when": "2025-10-01",
-      "who": ["Rachel", "Lena", "David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Storytelling and laughter."
+      "summary": "On July 16, 2025, in Seattle, Lena snapped a photo with Rachel at Pike Place Market, holding flowers and coffee.",
+      "when": "2025-07-16",
+      "who": ["Lena", "Rachel"],
+      "where": ["Seattle, WA"],
+      "what": "Market visit."
     },
     {
       "memory_id": "m07",
-      "summary": "In the afternoon, they rented bikes and explored the trails.",
-      "when": "2025-10-01",
-      "who": ["Lena", "Rachel", "David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Biking activity."
+      "summary": "On August 9, 2025, in Toronto, Lena stood near the CN Tower, smiling while eating an ice cream cone.",
+      "when": "2025-08-09",
+      "who": ["Lena"],
+      "where": ["Toronto, Canada"],
+      "what": "Tourist outing."
     },
     {
       "memory_id": "m08",
-      "summary": "Lena’s bike chain came loose and she had to stop briefly.",
-      "when": "2025-10-01",
-      "who": ["Lena"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Bike chain mishap."
+      "summary": "On September 14, 2025, in Austin, Lena laughed with David at a food truck festival, holding tacos in the evening crowd.",
+      "when": "2025-09-14",
+      "who": ["Lena", "David"],
+      "where": ["Austin, TX"],
+      "what": "Food truck festival."
     },
     {
       "memory_id": "m09",
-      "summary": "They relaxed under a tree, listening to music and sharing snacks.",
-      "when": "2025-10-01",
-      "who": ["Lena", "Rachel", "David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Resting, eating snacks, enjoying music."
+      "summary": "On October 27, 2025, in New York City, Lena and Julia watched a Broadway show together, taking a quick selfie at intermission.",
+      "when": "2025-10-27",
+      "who": ["Lena", "Julia"],
+      "where": ["New York, NY"],
+      "what": "Broadway outing."
     },
     {
       "memory_id": "m10",
-      "summary": "Before leaving, they took group photos together at sunset.",
-      "when": "2025-10-01",
-      "who": ["Lena", "Rachel", "David"],
-      "where": ["Ann Arbor, MI"],
-      "what": "Group photo at the end of the day."
+      "summary": "On December 24, 2025, in Denver, Lena sat with Rachel near a fireplace in a ski lodge, both holding mugs of hot chocolate.",
+      "when": "2025-12-24",
+      "who": ["Lena", "Rachel"],
+      "where": ["Denver, CO"],
+      "what": "Christmas Eve at ski lodge."
     }
   ],
-
   "qa_pairs": [
     {
       "qid": "qa_001",
-      "question": "How did the group prepare before starting their activities?",
-      "answer_gold": "They set up umbrellas and towels, unpacked snacks, and prepared a frisbee game.",
-      "evidence": ["m01", "m02"]
+      "question": "How did Lena's social circle vary across places, and what kinds of activities did they do together?",
+      "answer_gold": "She studied alone, visited an art gallery with Rachel, sight-saw with David, brunched with Julia, walked a bridge with Omar, shopped a market with Rachel, traveled solo in Toronto, tried food trucks with David, watched Broadway with Julia, and celebrated the holidays with Rachel.",
+      "evidence": ["m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10"]
     },
     {
       "qid": "qa_002",
-      "question": "What sequence of activities shows how their day moved from active to relaxed?",
-      "answer_gold": "They played frisbee, walked by the river, went biking, and finally rested under a tree before sunset photos.",
-      "evidence": ["m03", "m04", "m07", "m09", "m10"]
+      "question": "Which memories feature performances or arts, and how do they differ?",
+      "answer_gold": "An art gallery opening with Rachel and a Broadway show with Julia; one is a visual arts event, the other a live theater performance.",
+      "evidence": ["m02", "m09"]
     },
     {
       "qid": "qa_003",
-      "question": "What mishaps happened during the outing, and how might they have affected the mood?",
-      "answer_gold": "David dropped his water bottle and Lena’s bike chain came loose. Both likely added humor more than trouble.",
-      "evidence": ["m05", "m08"]
+      "question": "What food-related moments show Lena's experiences shifting from casual to celebratory?",
+      "answer_gold": "Tea while studying, brunch with family, food truck tacos with a friend, and hot chocolate by a lodge fireplace — moving from everyday to festive.",
+      "evidence": ["m01", "m04", "m08", "m10"]
     },
     {
       "qid": "qa_004",
-      "question": "What role did Rachel play in keeping the group entertained?",
-      "answer_gold": "She brought snacks, played frisbee, and told a funny road trip story that made everyone laugh.",
-      "evidence": ["m02", "m03", "m06"]
+      "question": "Which travel memories took Lena to iconic landmarks or destinations, and with whom?",
+      "answer_gold": "Cloud Gate with David, Golden Gate Bridge with Omar, CN Tower solo, and Pike Place Market with Rachel.",
+      "evidence": ["m03", "m05", "m07", "m06"]
     },
     {
       "qid": "qa_005",
-      "question": "What does the choice to take sunset photos suggest about their experience?",
-      "answer_gold": "It shows they wanted to capture a memorable ending, suggesting the day was meaningful and fun.",
+      "question": "Which memory best captures a holiday ambiance, and what details indicate it?",
+      "answer_gold": "Christmas Eve at the ski lodge with Rachel; the fireplace, mugs of hot chocolate, and the date indicate a holiday setting.",
       "evidence": ["m10"]
     }
   ]

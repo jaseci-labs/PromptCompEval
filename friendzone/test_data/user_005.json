@@ -1,0 +1,128 @@
+{
+  "user_id": "user_005",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "photo_id": "u005_p01",
+      "summary": "On January 15, 2025, in Ann Arbor, Emily studied late at night in the library, surrounded by open books and a glowing laptop screen.",
+      "when": "2025-01-15",
+      "who": ["Emily"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Studying in the library."
+    },
+    {
+      "memory_id": "m02",
+      "photo_id": "u005_p02",
+      "summary": "On March 2, 2025, in Chicago, Emily posed with her friend Sarah at Millennium Park, smiling in front of Cloud Gate on a chilly afternoon.",
+      "when": "2025-03-02",
+      "who": ["Emily", "Sarah"],
+      "where": ["Chicago, IL"],
+      "what": "Tourist outing with a friend."
+    },
+    {
+      "memory_id": "m03",
+      "photo_id": "u005_p03",
+      "summary": "On May 10, 2025, in Boston, Emily celebrated her cousin Alex's graduation, holding balloons while family members gathered in the background.",
+      "when": "2025-05-10",
+      "who": ["Emily", "Alex"],
+      "where": ["Boston, MA"],
+      "what": "Graduation celebration."
+    },
+    {
+      "memory_id": "m04",
+      "photo_id": "u005_p04",
+      "summary": "On July 4, 2025, in New York City, Emily watched fireworks over the Hudson River, standing with her friend Daniel among a cheering crowd.",
+      "when": "2025-07-04",
+      "who": ["Emily", "Daniel"],
+      "where": ["New York, NY"],
+      "what": "Independence Day fireworks."
+    },
+    {
+      "memory_id": "m05",
+      "photo_id": "u005_p05",
+      "summary": "On August 18, 2025, in Seattle, Emily and her parents posed together at Pike Place Market, holding bouquets of flowers near colorful vendor stalls.",
+      "when": "2025-08-18",
+      "who": ["Emily", "Helen", "Robert"],
+      "where": ["Seattle, WA"],
+      "what": "Family market visit."
+    },
+    {
+      "memory_id": "m06",
+      "photo_id": "u005_p06",
+      "summary": "On September 12, 2025, in Toronto, Emily stood with her college friend Omar at the base of the CN Tower, enjoying ice cream on a sunny afternoon.",
+      "when": "2025-09-12",
+      "who": ["Emily", "Omar"],
+      "where": ["Toronto, Canada"],
+      "what": "Tourist outing near CN Tower."
+    },
+    {
+      "memory_id": "m07",
+      "photo_id": "u005_p07",
+      "summary": "On October 5, 2025, in Austin, Emily laughed with Sarah at a food truck festival, both holding tacos under strings of lights.",
+      "when": "2025-10-05",
+      "who": ["Emily", "Sarah"],
+      "where": ["Austin, TX"],
+      "what": "Food truck festival with a friend."
+    },
+    {
+      "memory_id": "m08",
+      "photo_id": "u005_p08",
+      "summary": "On November 23, 2025, in San Francisco, Emily posed on the Golden Gate Bridge with Alex, fog rolling in behind them.",
+      "when": "2025-11-23",
+      "who": ["Emily", "Alex"],
+      "where": ["San Francisco, CA"],
+      "what": "Golden Gate Bridge walk."
+    },
+    {
+      "memory_id": "m09",
+      "photo_id": "u005_p09",
+      "summary": "On December 20, 2025, in Denver, Emily and Daniel relaxed in a ski lodge, sitting by the fireplace with mugs of hot chocolate.",
+      "when": "2025-12-20",
+      "who": ["Emily", "Daniel"],
+      "where": ["Denver, CO"],
+      "what": "Winter ski lodge trip."
+    },
+    {
+      "memory_id": "m10",
+      "photo_id": "u005_p10",
+      "summary": "On December 31, 2025, in Boston, Emily took a selfie with friends at a New Year's Eve party, with confetti and streamers filling the background.",
+      "when": "2025-12-31",
+      "who": ["Emily", "Sarah", "Omar", "Daniel"],
+      "where": ["Boston, MA"],
+      "what": "New Year's Eve celebration."
+    }
+  ],
+
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which friends and family did Emily spend time with across different places?",
+      "answer_gold": "She was with Sarah in Chicago and Austin, Alex in Boston and San Francisco, Daniel in New York and Denver, Omar in Toronto and Boston, and her parents in Seattle.",
+      "evidence": ["m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which memories involved food or drinks, and what do they suggest about the occasions?",
+      "answer_gold": "Coffee while studying, ice cream at the CN Tower, tacos at a food truck festival, hot chocolate at a ski lodge, and drinks at a New Year's Eve party — showing both casual and festive occasions.",
+      "evidence": ["m01", "m06", "m07", "m09", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which events mark big celebrations, and how do they differ?",
+      "answer_gold": "Alex's graduation, Independence Day fireworks, and the New Year's Eve party — one is a family milestone, one a national holiday, and one a global celebration.",
+      "evidence": ["m03", "m04", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "What shows Emily's travels across the country and abroad?",
+      "answer_gold": "She visited Chicago, Boston, New York, Seattle, Toronto, Austin, San Francisco, Denver, and Boston again — including a trip to Canada.",
+      "evidence": ["m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best reflects a cozy winter atmosphere?",
+      "answer_gold": "Relaxing with Daniel in a ski lodge by the fireplace with hot chocolate in Denver.",
+      "evidence": ["m09"]
+    }
+  ]
+}

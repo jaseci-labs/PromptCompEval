@@ -1,0 +1,117 @@
+{
+  "user_id": "user_006",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 8, 2025, in Ann Arbor, Noah started the quarter at a co-working space, headphones on and notebook open beside a steaming mug as snow fell outside.",
+      "when": "2025-01-08",
+      "who": ["Noah"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Quiet solo work session."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 3, 2025, in Chicago, Noah and Mia whiteboarded sprint goals in a glass meeting room, markers in hand and laptops open.",
+      "when": "2025-02-03",
+      "who": ["Noah", "Mia"],
+      "where": ["Chicago, IL"],
+      "what": "Sprint planning with a teammate."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 14, 2025, in New York, Noah presented a demo to Dana and Raj, gesturing toward slides while the team watched from a long conference table.",
+      "when": "2025-03-14",
+      "who": ["Noah", "Dana", "Raj"],
+      "where": ["New York, NY"],
+      "what": "Stakeholder demo."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 9, 2025, in Austin, Noah and Elena worked side by side at a hackathon, energy drinks and sticky notes scattered around their keyboards.",
+      "when": "2025-04-09",
+      "who": ["Noah", "Elena"],
+      "where": ["Austin, TX"],
+      "what": "Hackathon collaboration."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 21, 2025, in Seattle, Noah reviewed pull requests with Omar in a café, code diffs on screens and a plate of pastries between them.",
+      "when": "2025-05-21",
+      "who": ["Noah", "Omar"],
+      "where": ["Seattle, WA"],
+      "what": "Code review meetup."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 18, 2025, in Toronto, Noah met client Sara in a downtown office, shaking hands across a small table with project scopes printed out.",
+      "when": "2025-06-18",
+      "who": ["Noah", "Sara"],
+      "where": ["Toronto, Canada"],
+      "what": "Client kickoff."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 30, 2025, in San Francisco, Noah chatted with Priya and Chen at a tech conference expo hall, badges on lanyards and booths glowing behind them.",
+      "when": "2025-07-30",
+      "who": ["Noah", "Priya", "Chen"],
+      "where": ["San Francisco, CA"],
+      "what": "Conference networking."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 5, 2025, in London, Noah took a late-night selfie under station lights with Marco after a day of customer workshops.",
+      "when": "2025-09-05",
+      "who": ["Noah", "Marco"],
+      "where": ["London, UK"],
+      "what": "Post-workshop travel day."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 11, 2025, in Tokyo, Noah joined a small team dinner, laughing over ramen bowls after wrapping a cross-functional review.",
+      "when": "2025-10-11",
+      "who": ["Noah", "Mia", "Raj"],
+      "where": ["Tokyo, Japan"],
+      "what": "Team dinner after reviews."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 3, 2025, in Denver, Noah celebrated a promotion with friends at a cozy bar, raising a glass as string lights glowed overhead.",
+      "when": "2025-12-03",
+      "who": ["Noah", "Elena", "Omar", "Priya"],
+      "where": ["Denver, CO"],
+      "what": "Promotion celebration."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Across which cities did Noah work with teammates versus clients, and how did the activities differ?",
+      "answer_gold": "He collaborated with teammates in Chicago (planning), Austin (hackathon), Seattle (code review), San Francisco (conference), London/Tokyo (workshops/reviews), and met a client in Toronto (kickoff). Team activities were internal execution and learning, while the client meeting focused on scope and alignment.",
+      "evidence": ["m02", "m04", "m05", "m07", "m08", "m09", "m06"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What moments mark progress milestones in Noah's year, and what signals them?",
+      "answer_gold": "The New York stakeholder demo, the Toronto client kickoff, the Tokyo cross-functional review, and the Denver promotion celebration; each is signaled by formal presentations, agreement on scope, completion of reviews, and a celebratory toast.",
+      "evidence": ["m03", "m06", "m09", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "How does the working environment shift from solo focus to public engagement through the year?",
+      "answer_gold": "It begins with solo focus in Ann Arbor, moves to small team rooms and cafés for planning and reviews, expands to conference floors and workshops, and culminates in a public celebration.",
+      "evidence": ["m01", "m02", "m05", "m07", "m08", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which international trips did Noah take, and what was the purpose of each?",
+      "answer_gold": "Toronto for a client kickoff, London for customer workshops, and Tokyo for cross-functional reviews and a team dinner.",
+      "evidence": ["m06", "m08", "m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best illustrates cross-team collaboration and why?",
+      "answer_gold": "The Tokyo dinner after cross-functional reviews, because it follows a coordinated review effort across teams and ends with a shared team debrief.",
+      "evidence": ["m09"]
+    }
+  ]
+}

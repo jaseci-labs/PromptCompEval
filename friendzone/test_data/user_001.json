@@ -3,115 +3,115 @@
   "memories": [
     {
       "memory_id": "m01",
-      "summary": "John and his sister Anna set up a picnic blanket outdoors.",
-      "when": "2024-07-15",
-      "who": ["John Lee", "Anna Lee"],
-      "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Setting up a picnic blanket together before the picnic began."
+      "summary": "On January 10, 2025, in Ann Arbor, John sat at his desk with a cup of coffee, working on his laptop while snow fell softly outside the window.",
+      "when": "2025-01-10",
+      "who": ["John"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Working from home."
     },
     {
       "memory_id": "m02",
-      "summary": "Anna poured orange juice while John took a selfie during their brunch picnic.",
-      "when": "2024-07-15",
-      "who": ["Anna Lee", "John Lee"],
-      "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Anna pouring orange juice. John taking a selfie. Clarified as a brunch picnic."
+      "summary": "On February 14, 2025, in Detroit, John posed with his sister Anna at a Valentine's Day dinner, smiling with heart-shaped balloons in the background.",
+      "when": "2025-02-14",
+      "who": ["John", "Anna"],
+      "where": ["Detroit, MI"],
+      "what": "Dinner with family."
     },
     {
       "memory_id": "m03",
-      "summary": "John's friend Miguel arrived to join John and Anna after work at the rose garden.",
-      "when": "2024-07-15",
-      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
-      "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Friends gathering near the rose garden. Miguel arrived around 12:30 after work."
+      "summary": "On March 30, 2025, in Chicago, John stood with his friend Miguel at Millennium Park, both laughing while tourists crowded around Cloud Gate.",
+      "when": "2025-03-30",
+      "who": ["John", "Miguel"],
+      "where": ["Chicago, IL"],
+      "what": "Sightseeing trip."
     },
     {
       "memory_id": "m04",
-      "summary": "The group played frisbee on the open lawn after Miguel arrived.",
-      "when": "2024-07-15",
-      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
-      "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Group activity — playing frisbee together."
+      "summary": "On April 22, 2025, in New York City, John took a cheerful selfie with Anna during Earth Day celebrations in Central Park.",
+      "when": "2025-04-22",
+      "who": ["John", "Anna"],
+      "where": ["New York, NY"],
+      "what": "Earth Day celebration."
     },
     {
       "memory_id": "m05",
-      "summary": "Anna served homemade sandwiches while John set up a portable speaker for music.",
-      "when": "2024-07-15",
-      "who": ["Anna Lee", "John Lee"],
-      "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Anna sharing food, John handling music."
+      "summary": "On May 18, 2025, in Boston, John clinked glasses with college friends at a graduation party, captured in a lively indoor scene.",
+      "when": "2025-05-18",
+      "who": ["John", "Rachel", "Leo"],
+      "where": ["Boston, MA"],
+      "what": "Graduation party."
     },
     {
       "memory_id": "m06",
-      "summary": "Miguel shared a story about his morning at work that made everyone laugh.",
-      "when": "2024-07-15",
-      "who": ["Miguel Torres", "John Lee", "Anna Lee"],
-      "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Storytelling and laughter."
+      "summary": "On June 5, 2025, in Toronto, John enjoyed a summer evening with Miguel, holding ice cream cones near the CN Tower.",
+      "when": "2025-06-05",
+      "who": ["John", "Miguel"],
+      "where": ["Toronto, Canada"],
+      "what": "Tourist outing."
     },
     {
       "memory_id": "m07",
-      "summary": "The group rented a pedal boat for the afternoon at Stow Lake.",
-      "when": "2024-07-15",
-      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
-      "where": ["Golden Gate Park, Stow Lake, San Francisco, CA"],
-      "what": "Boating activity."
+      "summary": "On July 21, 2025, in San Francisco, John posed with Anna on the Golden Gate Bridge, fog rolling in behind them.",
+      "when": "2025-07-21",
+      "who": ["John", "Anna"],
+      "where": ["San Francisco, CA"],
+      "what": "Walking on Golden Gate Bridge."
     },
     {
       "memory_id": "m08",
-      "summary": "John accidentally dropped his sunglasses into the water while boating.",
-      "when": "2024-07-15",
-      "who": ["John Lee"],
-      "where": ["Golden Gate Park, Stow Lake, San Francisco, CA"],
-      "what": "Lost sunglasses in the lake."
+      "summary": "On September 2, 2025, in Austin, John and Miguel laughed together at a food truck festival, holding tacos while music played nearby.",
+      "when": "2025-09-02",
+      "who": ["John", "Miguel"],
+      "where": ["Austin, TX"],
+      "what": "Food truck festival."
     },
     {
       "memory_id": "m09",
-      "summary": "The group relaxed under a large oak tree, listened to music, and shared Anna's homemade cookies for dessert.",
-      "when": "2024-07-15",
-      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
-      "where": ["Golden Gate Park, San Francisco, CA"],
-      "what": "Resting, eating cookies, listening to music."
+      "summary": "On October 15, 2025, in Seattle, John snapped a selfie with Anna at Pike Place Market, holding fresh flowers from a vendor.",
+      "when": "2025-10-15",
+      "who": ["John", "Anna"],
+      "where": ["Seattle, WA"],
+      "what": "Visiting Pike Place Market."
     },
     {
       "memory_id": "m10",
-      "summary": "John, Anna, and Miguel took a group photo near the entrance to remember the day.",
-      "when": "2024-07-15",
-      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
-      "where": ["Golden Gate Park entrance, San Francisco, CA"],
-      "what": "Group photo before leaving."
+      "summary": "On December 25, 2025, in Denver, John and Anna smiled by a decorated Christmas tree, wearing winter sweaters inside a ski lodge.",
+      "when": "2025-12-25",
+      "who": ["John", "Anna"],
+      "where": ["Denver, CO"],
+      "what": "Christmas celebration."
     }
   ],
   "qa_pairs": [
     {
       "qid": "qa_001",
-      "question": "Who helped make the picnic enjoyable and in what ways?",
-      "answer_gold": "Anna brought food and drinks, John provided music, and Miguel added fun stories and games.",
-      "evidence": ["m02", "m05", "m06", "m09"]
+      "question": "Which friends or family did John spend time with in different cities, and what were they doing?",
+      "answer_gold": "He was with Anna at dinners and trips, with Miguel on sightseeing and festivals, and with college friends at a graduation party.",
+      "evidence": ["m02", "m03", "m04", "m05", "m06", "m08", "m09", "m10"]
     },
     {
       "qid": "qa_002",
-      "question": "How did the group's activities change from the beginning to the end of the day?",
-      "answer_gold": "They started by setting up and eating, then played frisbee and went boating, and finally relaxed with music and dessert before taking a group photo.",
-      "evidence": ["m01", "m04", "m07", "m09", "m10"]
+      "question": "Which memories involve food or drink, and what do they suggest about the occasions?",
+      "answer_gold": "Dinner with Anna, graduation party drinks, ice cream by the CN Tower, tacos at a festival, and Christmas hot drinks — they suggest celebrations and relaxed social time.",
+      "evidence": ["m02", "m05", "m06", "m08", "m10"]
     },
     {
       "qid": "qa_003",
-      "question": "What event could be seen as a small mishap, and what effect might it have had?",
-      "answer_gold": "John dropped his sunglasses into the lake while boating. It may have been inconvenient but likely added humor to the day.",
-      "evidence": ["m08"]
+      "question": "What sequence of activities shows John moving from solo time to group celebrations over the year?",
+      "answer_gold": "He worked alone at home, met family and friends for dinners and trips, joined bigger gatherings like a graduation party, and ended the year with a holiday celebration.",
+      "evidence": ["m01", "m02", "m03", "m05", "m10"]
     },
     {
       "qid": "qa_004",
-      "question": "What does the choice to take a group photo at the end suggest about their experience?",
-      "answer_gold": "It shows they valued the time together and wanted to capture the memory, suggesting the day was meaningful and positive.",
-      "evidence": ["m10"]
+      "question": "Which trips took John outside his home state, and who was with him?",
+      "answer_gold": "Chicago with Miguel, New York and San Francisco with Anna, Toronto with Miguel, Seattle with Anna, Austin with Miguel, and Denver with Anna.",
+      "evidence": ["m03", "m04", "m06", "m07", "m08", "m09", "m10"]
     },
     {
       "qid": "qa_005",
-      "question": "If Miguel had not joined, what parts of the day would likely have been different?",
-      "answer_gold": "They may not have played frisbee, heard his work story, or shared the same laughter, since his arrival added energy and new activities.",
-      "evidence": ["m03", "m04", "m06"]
+      "question": "Which memory best reflects a festive family moment, and what details support it?",
+      "answer_gold": "The Christmas celebration with Anna by a decorated tree in a ski lodge; holiday décor and winter sweaters signal a festive family moment.",
+      "evidence": ["m10"]
     }
   ]
 }
