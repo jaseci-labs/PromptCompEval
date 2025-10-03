@@ -1,0 +1,117 @@
+{
+  "user_id": "user_008",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 5, 2025, in Ann Arbor, David shoveled snow in his driveway while his kids played nearby, laughing in the cold air.",
+      "when": "2025-01-05",
+      "who": ["David", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Snow day with family."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 14, 2025, in Ann Arbor, David cooked dinner with his wife Sarah, candles glowing on the table for Valentine's Day.",
+      "when": "2025-02-14",
+      "who": ["David", "Sarah"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Valentine's Day dinner."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 9, 2025, in Detroit, David joined neighbors for a community clean-up, holding a trash bag with gloves on.",
+      "when": "2025-03-09",
+      "who": ["David", "Carlos", "Maya"],
+      "where": ["Detroit, MI"],
+      "what": "Neighborhood clean-up."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 20, 2025, in Chicago, David took a photo with his sister Anna during an Easter brunch at a crowded restaurant.",
+      "when": "2025-04-20",
+      "who": ["David", "Anna"],
+      "where": ["Chicago, IL"],
+      "what": "Family Easter brunch."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 25, 2025, in Boston, David ran a 5K charity race, smiling at the finish line with a medal around his neck.",
+      "when": "2025-05-25",
+      "who": ["David"],
+      "where": ["Boston, MA"],
+      "what": "Charity race."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 16, 2025, in Ann Arbor, David grilled burgers in his backyard with friends gathered around the picnic table.",
+      "when": "2025-06-16",
+      "who": ["David", "Carlos", "Sarah"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Summer BBQ."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 4, 2025, in Washington D.C., David watched fireworks with his children, holding Emma on his shoulders.",
+      "when": "2025-07-04",
+      "who": ["David", "Emma", "Liam"],
+      "where": ["Washington, D.C."],
+      "what": "Independence Day fireworks."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 6, 2025, in Toronto, David posed with his parents in front of the CN Tower during a family trip.",
+      "when": "2025-09-06",
+      "who": ["David", "Helen", "Robert"],
+      "where": ["Toronto, Canada"],
+      "what": "Family sightseeing."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 31, 2025, in Ann Arbor, David dressed up as a pirate, trick-or-treating with his kids in the neighborhood.",
+      "when": "2025-10-31",
+      "who": ["David", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Halloween with kids."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 24, 2025, in Ann Arbor, David and his family gathered by the Christmas tree, exchanging gifts in cozy sweaters.",
+      "when": "2025-12-24",
+      "who": ["David", "Sarah", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Christmas Eve celebration."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which holidays did David celebrate with family, and how?",
+      "answer_gold": "Easter brunch with Anna, Fourth of July fireworks with his kids, Halloween in costumes, and Christmas Eve by the tree.",
+      "evidence": ["m04", "m07", "m09", "m10"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What community or charitable activities did David join?",
+      "answer_gold": "He helped at a Detroit neighborhood clean-up and ran a 5K charity race in Boston.",
+      "evidence": ["m03", "m05"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Who are the family members appearing in David's memories?",
+      "answer_gold": "His wife Sarah, children Emma and Liam, sister Anna, and parents Helen and Robert.",
+      "evidence": ["m02", "m04", "m07", "m08", "m09", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which memories highlight David's role as a father?",
+      "answer_gold": "Playing with Emma and Liam during a snow day, watching fireworks with Emma on his shoulders, and trick-or-treating in costumes.",
+      "evidence": ["m01", "m07", "m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which trips took David outside of Ann Arbor, and for what purpose?",
+      "answer_gold": "Detroit for community work, Chicago for Easter brunch, Boston for a race, Washington D.C. for fireworks, and Toronto for family sightseeing.",
+      "evidence": ["m03", "m04", "m05", "m07", "m08"]
+    }
+  ]
+}
