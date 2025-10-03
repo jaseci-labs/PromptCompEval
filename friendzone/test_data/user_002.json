@@ -1,0 +1,118 @@
+{
+  "user_id": "user_002",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "Lena and her friends set up umbrellas and towels on the grass.",
+      "when": "2025-10-01",
+      "who": ["Lena", "Rachel", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Preparing their spot before activities began."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "Rachel unpacked snacks while David set up a frisbee game.",
+      "when": "2025-10-01",
+      "who": ["Rachel", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Food unpacking and game setup."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "Lena and Rachel played frisbee with David.",
+      "when": "2025-10-01",
+      "who": ["Lena", "Rachel", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Friendly frisbee game."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "After playing, the group cooled off by walking near the river.",
+      "when": "2025-10-01",
+      "who": ["Lena", "Rachel", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Relaxing by the river."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "While walking, David dropped his water bottle into the river.",
+      "when": "2025-10-01",
+      "who": ["David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Small mishap near the water."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "Rachel shared a funny story about her road trip last month.",
+      "when": "2025-10-01",
+      "who": ["Rachel", "Lena", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Storytelling and laughter."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "In the afternoon, they rented bikes and explored the trails.",
+      "when": "2025-10-01",
+      "who": ["Lena", "Rachel", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Biking activity."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "Lena’s bike chain came loose and she had to stop briefly.",
+      "when": "2025-10-01",
+      "who": ["Lena"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Bike chain mishap."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "They relaxed under a tree, listening to music and sharing snacks.",
+      "when": "2025-10-01",
+      "who": ["Lena", "Rachel", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Resting, eating snacks, enjoying music."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "Before leaving, they took group photos together at sunset.",
+      "when": "2025-10-01",
+      "who": ["Lena", "Rachel", "David"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Group photo at the end of the day."
+    }
+  ],
+
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "How did the group prepare before starting their activities?",
+      "answer_gold": "They set up umbrellas and towels, unpacked snacks, and prepared a frisbee game.",
+      "evidence": ["m01", "m02"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What sequence of activities shows how their day moved from active to relaxed?",
+      "answer_gold": "They played frisbee, walked by the river, went biking, and finally rested under a tree before sunset photos.",
+      "evidence": ["m03", "m04", "m07", "m09", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "What mishaps happened during the outing, and how might they have affected the mood?",
+      "answer_gold": "David dropped his water bottle and Lena’s bike chain came loose. Both likely added humor more than trouble.",
+      "evidence": ["m05", "m08"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "What role did Rachel play in keeping the group entertained?",
+      "answer_gold": "She brought snacks, played frisbee, and told a funny road trip story that made everyone laugh.",
+      "evidence": ["m02", "m03", "m06"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "What does the choice to take sunset photos suggest about their experience?",
+      "answer_gold": "It shows they wanted to capture a memorable ending, suggesting the day was meaningful and fun.",
+      "evidence": ["m10"]
+    }
+  ]
+}

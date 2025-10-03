@@ -1,0 +1,118 @@
+{
+  "user_id": "user_003",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On March 3, 2024, in Ann Arbor, Julia sat by the window in a coffee shop, reading a book with a latte beside her. The warm sunlight created a calm and quiet atmosphere.",
+      "when": "2024-03-03",
+      "who": ["Julia"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Relaxing in a café with a book."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On April 15, 2024, in Chicago, Mark and Omar posed in front of the Cloud Gate sculpture, smiling as tourists walked around them on a busy afternoon.",
+      "when": "2024-04-15",
+      "who": ["Mark", "Omar"],
+      "where": ["Chicago, IL"],
+      "what": "Sightseeing at Cloud Gate."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On May 20, 2024, in New York City, Julia and her college friends gathered at Central Park for a picnic, sitting on a blanket with snacks spread out. The mood was lively and social.",
+      "when": "2024-05-20",
+      "who": ["Julia", "Samantha", "Leo"],
+      "where": ["Central Park, New York, NY"],
+      "what": "Picnic with friends."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On June 2, 2024, in Los Angeles, Omar attended a jazz concert in a dimly lit club, captured mid-laughter at a table with two colleagues.",
+      "when": "2024-06-02",
+      "who": ["Omar", "Daniel", "Priya"],
+      "where": ["Los Angeles, CA"],
+      "what": "Jazz concert night out."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On July 10, 2024, in Toronto, Mark stood near the CN Tower holding an ice cream cone, with a bright summer sky behind him.",
+      "when": "2024-07-10",
+      "who": ["Mark"],
+      "where": ["Toronto, Canada"],
+      "what": "Tourist outing near CN Tower."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On August 22, 2024, in Seattle, Julia took a selfie with Omar at Pike Place Market, holding fresh flowers while street musicians played nearby.",
+      "when": "2024-08-22",
+      "who": ["Julia", "Omar"],
+      "where": ["Seattle, WA"],
+      "what": "Visiting Pike Place Market."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On September 5, 2024, in San Francisco, Samantha photographed Julia and Mark walking along the Golden Gate Bridge with fog rolling in behind them.",
+      "when": "2024-09-05",
+      "who": ["Julia", "Mark"],
+      "where": ["San Francisco, CA"],
+      "what": "Walking on Golden Gate Bridge."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On October 1, 2024, in Austin, Omar and David attended a food truck festival, holding tacos and laughing at a street performer's act.",
+      "when": "2024-10-01",
+      "who": ["Omar", "David"],
+      "where": ["Austin, TX"],
+      "what": "Food truck festival."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On November 18, 2024, in Boston, Julia posed with her parents in front of a decorated Christmas tree at the town square. The lights gave a festive glow.",
+      "when": "2024-11-18",
+      "who": ["Julia", "Helen", "Robert"],
+      "where": ["Boston, MA"],
+      "what": "Family photo by Christmas tree."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 25, 2024, in Denver, Mark and Omar clinked mugs of hot chocolate while sitting near a fireplace in a ski lodge, looking cheerful in winter sweaters.",
+      "when": "2024-12-25",
+      "who": ["Mark", "Omar"],
+      "where": ["Denver, CO"],
+      "what": "Holiday trip at ski lodge."
+    }
+  ],
+
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "What types of social activities did Julia take part in throughout the year?",
+      "answer_gold": "She relaxed alone at a café, joined a picnic with friends, visited Pike Place Market, walked the Golden Gate Bridge, and celebrated with her parents at Christmas.",
+      "evidence": ["m01", "m03", "m06", "m07", "m09"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which memories capture moments with food or drinks?",
+      "answer_gold": "Julia's café latte, the picnic in Central Park, Marks ice cream by CN Tower, tacos at the food truck festival, and hot chocolate at the ski lodge.",
+      "evidence": ["m01", "m03", "m05", "m08", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Who did Omar spend time with in different places?",
+      "answer_gold": "He was with colleagues at a jazz concert, Julia at Pike Place Market, David at a food truck festival, and Mark at a ski lodge.",
+      "evidence": ["m04", "m06", "m08", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "What travel destinations outside the U.S. appear in these memories?",
+      "answer_gold": "Toronto, where Mark visited the CN Tower.",
+      "evidence": ["m05"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best reflects a festive family gathering?",
+      "answer_gold": "Julia posing with her parents in front of the Christmas tree in Boston.",
+      "evidence": ["m09"]
+    }
+  ]
+}
