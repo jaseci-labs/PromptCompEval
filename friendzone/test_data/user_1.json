@@ -1,0 +1,117 @@
+{
+  "user_id": "user_001",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "John and his sister Anna set up a picnic blanket outdoors.",
+      "when": "2024-07-15",
+      "who": ["John Lee", "Anna Lee"],
+      "where": ["Golden Gate Park, San Francisco, CA"],
+      "what": "Setting up a picnic blanket together before the picnic began."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "Anna poured orange juice while John took a selfie during their brunch picnic.",
+      "when": "2024-07-15",
+      "who": ["Anna Lee", "John Lee"],
+      "where": ["Golden Gate Park, San Francisco, CA"],
+      "what": "Anna pouring orange juice. John taking a selfie. Clarified as a brunch picnic."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "John's friend Miguel arrived to join John and Anna after work at the rose garden.",
+      "when": "2024-07-15",
+      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
+      "where": ["Golden Gate Park, San Francisco, CA"],
+      "what": "Friends gathering near the rose garden. Miguel arrived around 12:30 after work."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "The group played frisbee on the open lawn after Miguel arrived.",
+      "when": "2024-07-15",
+      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
+      "where": ["Golden Gate Park, San Francisco, CA"],
+      "what": "Group activity — playing frisbee together."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "Anna served homemade sandwiches while John set up a portable speaker for music.",
+      "when": "2024-07-15",
+      "who": ["Anna Lee", "John Lee"],
+      "where": ["Golden Gate Park, San Francisco, CA"],
+      "what": "Anna sharing food, John handling music."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "Miguel shared a story about his morning at work that made everyone laugh.",
+      "when": "2024-07-15",
+      "who": ["Miguel Torres", "John Lee", "Anna Lee"],
+      "where": ["Golden Gate Park, San Francisco, CA"],
+      "what": "Storytelling and laughter."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "The group rented a pedal boat for the afternoon at Stow Lake.",
+      "when": "2024-07-15",
+      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
+      "where": ["Golden Gate Park, Stow Lake, San Francisco, CA"],
+      "what": "Boating activity."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "John accidentally dropped his sunglasses into the water while boating.",
+      "when": "2024-07-15",
+      "who": ["John Lee"],
+      "where": ["Golden Gate Park, Stow Lake, San Francisco, CA"],
+      "what": "Lost sunglasses in the lake."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "The group relaxed under a large oak tree, listened to music, and shared Anna's homemade cookies for dessert.",
+      "when": "2024-07-15",
+      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
+      "where": ["Golden Gate Park, San Francisco, CA"],
+      "what": "Resting, eating cookies, listening to music."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "John, Anna, and Miguel took a group photo near the entrance to remember the day.",
+      "when": "2024-07-15",
+      "who": ["John Lee", "Anna Lee", "Miguel Torres"],
+      "where": ["Golden Gate Park entrance, San Francisco, CA"],
+      "what": "Group photo before leaving."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Who helped make the picnic enjoyable and in what ways?",
+      "answer_gold": "Anna brought food and drinks, John provided music, and Miguel added fun stories and games.",
+      "evidence": ["m02", "m05", "m06", "m09"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "How did the group's activities change from the beginning to the end of the day?",
+      "answer_gold": "They started by setting up and eating, then played frisbee and went boating, and finally relaxed with music and dessert before taking a group photo.",
+      "evidence": ["m01", "m04", "m07", "m09", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "What event could be seen as a small mishap, and what effect might it have had?",
+      "answer_gold": "John dropped his sunglasses into the lake while boating. It may have been inconvenient but likely added humor to the day.",
+      "evidence": ["m08"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "What does the choice to take a group photo at the end suggest about their experience?",
+      "answer_gold": "It shows they valued the time together and wanted to capture the memory, suggesting the day was meaningful and positive.",
+      "evidence": ["m10"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "If Miguel had not joined, what parts of the day would likely have been different?",
+      "answer_gold": "They may not have played frisbee, heard his work story, or shared the same laughter, since his arrival added energy and new activities.",
+      "evidence": ["m03", "m04", "m06"]
+    }
+  ]
+}
