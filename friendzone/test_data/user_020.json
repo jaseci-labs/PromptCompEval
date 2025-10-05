@@ -1,0 +1,117 @@
+{
+  "user_id": "user_020",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 3, 2025, in Ann Arbor, Emma began her morning yoga practice at home, stretching beside a large window as snow fell outside.",
+      "when": "2025-01-03",
+      "who": ["Emma"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Morning yoga routine."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 12, 2025, in Chicago, Emma attended a mindfulness retreat, meditating in a quiet hall with a small group of participants.",
+      "when": "2025-02-12",
+      "who": ["Emma"],
+      "where": ["Chicago, IL"],
+      "what": "Mindfulness retreat."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 15, 2025, in Detroit, Emma led a weekend fitness class, guiding attendees through light cardio and breathing exercises.",
+      "when": "2025-03-15",
+      "who": ["Emma"],
+      "where": ["Detroit, MI"],
+      "what": "Community fitness session."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 22, 2025, in New York, Emma joined a wellness conference, taking notes during a talk on plant-based nutrition and mental health.",
+      "when": "2025-04-22",
+      "who": ["Emma", "Rachel"],
+      "where": ["New York, NY"],
+      "what": "Wellness conference attendance."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 28, 2025, in Miami, Emma went for a sunrise run along the beach, her sneakers leaving footprints in the damp sand.",
+      "when": "2025-05-28",
+      "who": ["Emma"],
+      "where": ["Miami, FL"],
+      "what": "Morning run by the ocean."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 19, 2025, in Denver, Emma hiked a forest trail with her friend Daniel, stopping to stretch and photograph mountain views.",
+      "when": "2025-06-19",
+      "who": ["Emma", "Daniel"],
+      "where": ["Denver, CO"],
+      "what": "Nature hike for wellness."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 12, 2025, in San Francisco, Emma attended a vegan cooking workshop, preparing colorful plant-based dishes with a local chef.",
+      "when": "2025-07-12",
+      "who": ["Emma"],
+      "where": ["San Francisco, CA"],
+      "what": "Vegan cooking class."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 1, 2025, in Seattle, Emma joined a mental health awareness walk, wearing a blue ribbon with hundreds of other participants.",
+      "when": "2025-09-01",
+      "who": ["Emma", "Sarah"],
+      "where": ["Seattle, WA"],
+      "what": "Mental health awareness event."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 18, 2025, in Toronto, Emma gave a short talk at a wellness expo, sharing her journey of balancing physical and mental health.",
+      "when": "2025-10-18",
+      "who": ["Emma"],
+      "where": ["Toronto, Canada"],
+      "what": "Speaker session at wellness expo."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 29, 2025, in Ann Arbor, Emma reflected on her year while journaling by candlelight, writing about gratitude and growth.",
+      "when": "2025-12-29",
+      "who": ["Emma"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Year-end reflection journaling."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "What forms of wellness did Emma practice or promote throughout 2025?",
+      "answer_gold": "Yoga, meditation, fitness training, healthy eating, outdoor exercise, and mental health awareness.",
+      "evidence": ["m01", "m02", "m03", "m07", "m08"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which events show Emma engaging with her community rather than focusing on personal wellness?",
+      "answer_gold": "Leading a fitness class in Detroit, joining a mental health walk in Seattle, and speaking at the Toronto wellness expo.",
+      "evidence": ["m03", "m08", "m09"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "How did Emma balance travel with maintaining her health routines?",
+      "answer_gold": "She continued exercise and mindfulness during trips, including running in Miami, hiking in Denver, and attending workshops abroad.",
+      "evidence": ["m05", "m06", "m07"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which memory reflects Emma's shift toward teaching and leadership?",
+      "answer_gold": "Her talk at the Toronto wellness expo, where she shared her health journey with others.",
+      "evidence": ["m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best captures reflection and inner peace?",
+      "answer_gold": "Her final entry of the year — journaling by candlelight about gratitude and growth.",
+      "evidence": ["m10"]
+    }
+  ]
+}

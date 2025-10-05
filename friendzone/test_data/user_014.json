@@ -1,0 +1,117 @@
+{
+  "user_id": "user_014",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 4, 2025, in Denver, Jack hiked through a snowy forest trail, his breath visible in the cold air as he stopped to take photos of pine trees.",
+      "when": "2025-01-04",
+      "who": ["Jack"],
+      "where": ["Denver, CO"],
+      "what": "Winter forest hike."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 16, 2025, in Sedona, Jack climbed red rock formations with his friend Maya, pausing at the top to watch the sunset.",
+      "when": "2025-02-16",
+      "who": ["Jack", "Maya"],
+      "where": ["Sedona, AZ"],
+      "what": "Sunset rock climb."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 20, 2025, in Yosemite National Park, Jack camped with his cousin Ethan, roasting marshmallows beside a glowing campfire.",
+      "when": "2025-03-20",
+      "who": ["Jack", "Ethan"],
+      "where": ["Yosemite National Park, CA"],
+      "what": "Camping trip."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 10, 2025, in Zion National Park, Jack hiked The Narrows, wading through shallow water surrounded by towering canyon walls.",
+      "when": "2025-04-10",
+      "who": ["Jack"],
+      "where": ["Zion National Park, UT"],
+      "what": "Canyon hiking."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 18, 2025, in Grand Canyon Village, Jack took a panoramic photo from the South Rim with his parents smiling beside him.",
+      "when": "2025-05-18",
+      "who": ["Jack", "Helen", "Robert"],
+      "where": ["Grand Canyon, AZ"],
+      "what": "Family trip to Grand Canyon."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 22, 2025, in Seattle, Jack went kayaking on Lake Union with his friend Daniel, paddling beneath the city skyline.",
+      "when": "2025-06-22",
+      "who": ["Jack", "Daniel"],
+      "where": ["Seattle, WA"],
+      "what": "Kayaking adventure."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 25, 2025, in Banff National Park, Jack stood near a turquoise lake, his reflection mirrored on the calm water.",
+      "when": "2025-07-25",
+      "who": ["Jack"],
+      "where": ["Banff National Park, Canada"],
+      "what": "Lakeside hike."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 7, 2025, in Glacier National Park, Jack joined a hiking group, trekking along a mountain ridge under clear blue skies.",
+      "when": "2025-09-07",
+      "who": ["Jack", "Maya", "Ethan"],
+      "where": ["Glacier National Park, MT"],
+      "what": "Group mountain hike."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 15, 2025, in Acadia National Park, Jack biked through autumn-colored trails, leaves scattering beneath his tires.",
+      "when": "2025-10-15",
+      "who": ["Jack"],
+      "where": ["Acadia National Park, ME"],
+      "what": "Fall biking trip."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 5, 2025, in Denver, Jack sat beside a campfire in his backyard, sipping cocoa while reviewing photos from his year of travels.",
+      "when": "2025-12-05",
+      "who": ["Jack"],
+      "where": ["Denver, CO"],
+      "what": "Reflecting on the year outdoors."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which regions did Jack explore across 2025, and what activities did he do there?",
+      "answer_gold": "He hiked in Colorado and Utah, climbed rocks in Arizona, camped in California, kayaked in Washington, biked in Maine, and hiked in Canada and Montana.",
+      "evidence": ["m01", "m02", "m03", "m04", "m06", "m07", "m08", "m09"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which memories show Jack traveling with others, and who were they?",
+      "answer_gold": "With Maya in Sedona and Glacier, Ethan in Yosemite and Glacier, Daniel in Seattle, and his parents at the Grand Canyon.",
+      "evidence": ["m02", "m03", "m05", "m06", "m08"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which outdoor activities involved water?",
+      "answer_gold": "Kayaking on Lake Union, hiking The Narrows in Zion, and camping near rivers in Yosemite.",
+      "evidence": ["m03", "m04", "m06"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "What shows Jack's shift from adventure to reflection through the year?",
+      "answer_gold": "He began with challenging hikes and climbs, then ended the year quietly by his backyard campfire reflecting on his travels.",
+      "evidence": ["m01", "m02", "m08", "m10"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best captures natural beauty, and what details emphasize it?",
+      "answer_gold": "The Banff hike, where his reflection appeared in the turquoise lake under calm weather.",
+      "evidence": ["m07"]
+    }
+  ]
+}

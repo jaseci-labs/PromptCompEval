@@ -1,0 +1,117 @@
+{
+  "user_id": "user_019",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 8, 2025, in Banff National Park, Daniel stood on a frozen lake, photographing snow-covered peaks under a bright winter sun.",
+      "when": "2025-01-08",
+      "who": ["Daniel"],
+      "where": ["Banff National Park, Canada"],
+      "what": "Winter mountain photography."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 11, 2025, in New York, Daniel captured the skyline from the Brooklyn Bridge at sunrise, the sky glowing orange and gold.",
+      "when": "2025-02-11",
+      "who": ["Daniel"],
+      "where": ["New York, NY"],
+      "what": "Cityscape photography at sunrise."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 18, 2025, in Marrakech, Daniel photographed vibrant markets filled with spices, textiles, and colorful lamps.",
+      "when": "2025-03-18",
+      "who": ["Daniel"],
+      "where": ["Marrakech, Morocco"],
+      "what": "Cultural market photography."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 22, 2025, in Rome, Daniel took street photos of daily life near the Colosseum, capturing tourists and locals crossing sunlit cobblestones.",
+      "when": "2025-04-22",
+      "who": ["Daniel"],
+      "where": ["Rome, Italy"],
+      "what": "Urban street photography."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 26, 2025, in Santorini, Daniel photographed white cliffside houses against the blue Aegean Sea at sunset.",
+      "when": "2025-05-26",
+      "who": ["Daniel"],
+      "where": ["Santorini, Greece"],
+      "what": "Sunset coastal photography."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 14, 2025, in Kyoto, Daniel captured a series of temple photos framed by red torii gates and green mossy gardens.",
+      "when": "2025-06-14",
+      "who": ["Daniel"],
+      "where": ["Kyoto, Japan"],
+      "what": "Architectural temple photography."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 19, 2025, in Sydney, Daniel photographed surfers riding waves near Bondi Beach under bright summer skies.",
+      "when": "2025-07-19",
+      "who": ["Daniel"],
+      "where": ["Sydney, Australia"],
+      "what": "Action beach photography."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 2, 2025, in Cape Town, Daniel hiked Table Mountain with his camera gear, taking panoramic shots of the coastline below.",
+      "when": "2025-09-02",
+      "who": ["Daniel", "Olivia"],
+      "where": ["Cape Town, South Africa"],
+      "what": "Landscape hike photography."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 10, 2025, in Reykjavik, Daniel photographed the Northern Lights, green waves of light rippling above the icy landscape.",
+      "when": "2025-10-10",
+      "who": ["Daniel"],
+      "where": ["Reykjavik, Iceland"],
+      "what": "Night sky photography."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 28, 2025, in Ann Arbor, Daniel curated his annual photo exhibition, showcasing framed prints from around the world to a local audience.",
+      "when": "2025-12-28",
+      "who": ["Daniel", "Olivia", "Maya"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Photography exhibition."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which continents did Daniel visit for photography in 2025?",
+      "answer_gold": "North America (Canada, U.S.), Africa (Morocco, South Africa), Europe (Italy, Greece, Iceland), Asia (Japan), and Australia (Sydney).",
+      "evidence": ["m01", "m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What types of photography did Daniel explore throughout the year?",
+      "answer_gold": "Landscape, cityscape, street, cultural, architectural, action, and night sky photography.",
+      "evidence": ["m01", "m02", "m03", "m04", "m05", "m06", "m07", "m09"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which memories show Daniel collaborating or sharing his work with others?",
+      "answer_gold": "Hiking with Olivia in Cape Town and exhibiting photos with Olivia and Maya in Ann Arbor.",
+      "evidence": ["m08", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which locations best demonstrate Daniel's focus on natural beauty?",
+      "answer_gold": "Banff, Santorini, Cape Town, and Reykjavik, where he photographed mountains, sunsets, coastlines, and the Northern Lights.",
+      "evidence": ["m01", "m05", "m08", "m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "What shows Daniel's evolution from traveler to professional photographer?",
+      "answer_gold": "He began documenting his travels independently and ended the year hosting a curated photo exhibition in Ann Arbor.",
+      "evidence": ["m01", "m10"]
+    }
+  ]
+}

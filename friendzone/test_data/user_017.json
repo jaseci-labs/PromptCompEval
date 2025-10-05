@@ -1,0 +1,117 @@
+{
+  "user_id": "user_017",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 12, 2025, in Ann Arbor, Leo packed winter clothes at a donation drive, smiling as volunteers sorted coats into boxes.",
+      "when": "2025-01-12",
+      "who": ["Leo"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Winter clothing donation drive."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 20, 2025, in Detroit, Leo helped serve meals at a community shelter, chatting with guests at long wooden tables.",
+      "when": "2025-02-20",
+      "who": ["Leo", "Sarah"],
+      "where": ["Detroit, MI"],
+      "what": "Volunteering at homeless shelter."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 8, 2025, in Chicago, Leo attended an environmental awareness rally, holding a handmade sign that read 'Act Now for Our Planet.'",
+      "when": "2025-03-08",
+      "who": ["Leo"],
+      "where": ["Chicago, IL"],
+      "what": "Environmental rally participation."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 17, 2025, in Washington D.C., Leo joined a climate policy conference, taking notes during a panel on renewable energy initiatives.",
+      "when": "2025-04-17",
+      "who": ["Leo", "Rachel"],
+      "where": ["Washington, D.C."],
+      "what": "Climate policy conference."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 25, 2025, in New Orleans, Leo helped rebuild homes damaged by flooding, painting walls with a local volunteer group.",
+      "when": "2025-05-25",
+      "who": ["Leo", "David"],
+      "where": ["New Orleans, LA"],
+      "what": "Flood recovery volunteering."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 21, 2025, in San Francisco, Leo gave a short speech at a sustainability summit, highlighting the importance of community recycling programs.",
+      "when": "2025-06-21",
+      "who": ["Leo"],
+      "where": ["San Francisco, CA"],
+      "what": "Speech at sustainability summit."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 30, 2025, in Nairobi, Leo joined an NGO field project, distributing clean water filters in a rural village with local volunteers.",
+      "when": "2025-07-30",
+      "who": ["Leo", "Omar"],
+      "where": ["Nairobi, Kenya"],
+      "what": "Humanitarian aid mission."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 4, 2025, in Rio de Janeiro, Leo participated in a beach cleanup event, collecting plastic waste along the shoreline.",
+      "when": "2025-09-04",
+      "who": ["Leo", "Maya"],
+      "where": ["Rio de Janeiro, Brazil"],
+      "what": "Beach cleanup activity."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 19, 2025, in Toronto, Leo met youth leaders at a social impact forum, exchanging ideas about environmental education.",
+      "when": "2025-10-19",
+      "who": ["Leo"],
+      "where": ["Toronto, Canada"],
+      "what": "Social impact networking."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 14, 2025, in Ann Arbor, Leo spoke at a local school assembly, encouraging students to volunteer in their communities.",
+      "when": "2025-12-14",
+      "who": ["Leo"],
+      "where": ["Ann Arbor, MI"],
+      "what": "School talk on community engagement."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which causes did Leo support through his volunteer work?",
+      "answer_gold": "He contributed to homelessness relief, flood recovery, climate activism, environmental cleanup, and humanitarian water projects.",
+      "evidence": ["m02", "m03", "m05", "m07", "m08"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which international volunteer activities did Leo participate in?",
+      "answer_gold": "He joined a clean water project in Nairobi and a beach cleanup in Rio de Janeiro.",
+      "evidence": ["m07", "m08"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "What shows Leo's shift from volunteer work to advocacy and leadership?",
+      "answer_gold": "He started by serving meals and rebuilding homes, then gave speeches at summits, joined policy conferences, and later inspired students through talks.",
+      "evidence": ["m02", "m05", "m04", "m06", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Who collaborated with Leo in his volunteer work, and where?",
+      "answer_gold": "Sarah at the Detroit shelter, David in New Orleans, Omar in Nairobi, Maya in Rio, and Rachel at the climate conference in D.C.",
+      "evidence": ["m02", "m04", "m05", "m07", "m08"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best captures Leo's role as a community motivator?",
+      "answer_gold": "His school assembly talk in Ann Arbor, where he encouraged students to engage in volunteering.",
+      "evidence": ["m10"]
+    }
+  ]
+}

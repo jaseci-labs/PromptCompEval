@@ -1,0 +1,117 @@
+{
+  "user_id": "user_018",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 10, 2025, in New York, Julia took a mirror selfie in her apartment, showing her winter outfit before attending Fashion Week events.",
+      "when": "2025-01-10",
+      "who": ["Julia"],
+      "where": ["New York, NY"],
+      "what": "Fashion Week outfit post."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 5, 2025, in Paris, Julia posed on a cobblestone street in a beige trench coat, her friend Maya capturing photos for her blog.",
+      "when": "2025-02-05",
+      "who": ["Julia", "Maya"],
+      "where": ["Paris, France"],
+      "what": "Street style photoshoot."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 14, 2025, in Milan, Julia attended a designer showcase, seated in the front row with a notepad in hand for her upcoming review article.",
+      "when": "2025-03-14",
+      "who": ["Julia"],
+      "where": ["Milan, Italy"],
+      "what": "Fashion show attendance."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 22, 2025, in London, Julia recorded a vlog in a local café, reviewing eco-friendly fashion brands while sipping coffee.",
+      "when": "2025-04-22",
+      "who": ["Julia"],
+      "where": ["London, UK"],
+      "what": "Fashion vlog filming."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 17, 2025, in Los Angeles, Julia collaborated with a sustainable clothing brand, posing for promotional photos in a sunny studio.",
+      "when": "2025-05-17",
+      "who": ["Julia"],
+      "where": ["Los Angeles, CA"],
+      "what": "Brand collaboration shoot."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 28, 2025, in Tokyo, Julia explored a street market, filming short clips for her fashion travel vlog series.",
+      "when": "2025-06-28",
+      "who": ["Julia"],
+      "where": ["Tokyo, Japan"],
+      "what": "Travel vlog filming."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 20, 2025, in Seoul, Julia met with a Korean designer to discuss a cross-cultural fashion collaboration.",
+      "when": "2025-07-20",
+      "who": ["Julia", "Minho"],
+      "where": ["Seoul, South Korea"],
+      "what": "Designer meeting."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 3, 2025, in New York, Julia hosted a live Q&A session with her followers, discussing ethical shopping and creative burnout.",
+      "when": "2025-09-03",
+      "who": ["Julia"],
+      "where": ["New York, NY"],
+      "what": "Online community event."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 14, 2025, in Toronto, Julia attended a blogger summit, sitting on a panel about women in digital entrepreneurship.",
+      "when": "2025-10-14",
+      "who": ["Julia"],
+      "where": ["Toronto, Canada"],
+      "what": "Panel discussion at summit."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 23, 2025, in New York, Julia celebrated reaching 1 million followers, posing with balloons and a cake shaped like a camera.",
+      "when": "2025-12-23",
+      "who": ["Julia", "Maya"],
+      "where": ["New York, NY"],
+      "what": "Social media milestone celebration."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "How did Julia's fashion career evolve throughout 2025?",
+      "answer_gold": "She began attending major fashion shows, moved into collaborations and vlogging, expanded internationally, and ended the year as an established influencer with one million followers.",
+      "evidence": ["m01", "m03", "m05", "m06", "m10"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which international cities did Julia visit, and what was her purpose in each?",
+      "answer_gold": "Paris for a photoshoot, Milan for a fashion show, London for a vlog, Tokyo for market exploration, and Seoul for a designer collaboration.",
+      "evidence": ["m02", "m03", "m04", "m06", "m07"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "What topics did Julia use her platform to discuss beyond fashion?",
+      "answer_gold": "She addressed sustainability, ethical shopping, and managing creative burnout.",
+      "evidence": ["m04", "m08"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Who collaborated with Julia across her career moments?",
+      "answer_gold": "Maya photographed her in Paris and celebrated with her in New York, and Minho worked with her on a Seoul collaboration.",
+      "evidence": ["m02", "m07", "m10"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which event best represents Julia's global recognition, and why?",
+      "answer_gold": "Her panel discussion at the Toronto blogger summit, where she spoke about women in digital entrepreneurship, showcasing her influence beyond fashion.",
+      "evidence": ["m09"]
+    }
+  ]
+}
