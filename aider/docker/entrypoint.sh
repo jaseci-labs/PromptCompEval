@@ -6,6 +6,9 @@ COMMIT_HASH=$2
 TEST_CMD=$3
 PROBLEM_STATEMENT="$4"
 
+# Initialize conda for this script
+eval "$(conda shell.bash hook)"
+
 ###############################################
 # 1. Clone target repository
 ###############################################
@@ -16,38 +19,51 @@ echo "Checking out commit: $COMMIT_HASH"
 git checkout $COMMIT_HASH
 
 ###############################################
-# 2. Create an ISOLATED virtual environment for the target repo
-#    This prevents aider-genius (global) deps from colliding with
+# 2. Create a CONDA environment for the target repo
+#    This prevents aider-genius (in its own env) deps from colliding with
 #    the project's required dependency versions.
 ###############################################
-REPO_VENV_ROOT=/workspace/envs
-mkdir -p "$REPO_VENV_ROOT"
-# Derive a unique, filesystem-safe slug from repo URL + commit
 SLUG_RAW="$(basename "$REPO_URL")"
 SLUG_NO_GIT="${SLUG_RAW%.git}"
-REPO_VENV="$REPO_VENV_ROOT/${SLUG_NO_GIT}_${COMMIT_HASH}" 
-python -m venv "$REPO_VENV"
+REPO_ENV_NAME="${SLUG_NO_GIT}_${COMMIT_HASH:0:8}"
+
+echo "Creating conda environment: $REPO_ENV_NAME"
+
+# Detect Python version needed for the repo (default to 3.9 for compatibility)
+PYTHON_VERSION="3.9"
+if [ -f .python-version ]; then
+    PYTHON_VERSION=$(cat .python-version | head -1)
+elif [ -f pyproject.toml ] && grep -q "python_requires" pyproject.toml; then
+    # Extract python version from pyproject.toml if available
+    PYTHON_VERSION="3.9"  # fallback
+elif [ -f setup.py ] && grep -q "python_requires" setup.py; then
+    # Extract python version from setup.py if available  
+    PYTHON_VERSION="3.9"  # fallback
+fi
+
+echo "Using Python $PYTHON_VERSION for repo environment"
+
+# Create conda environment for the repo
+conda create -n "$REPO_ENV_NAME" python="$PYTHON_VERSION" -y
+conda clean -afy
 
 ACTIVATE_REPO_ENV() {
-    # shellcheck disable=SC1090
-    source "$REPO_VENV/bin/activate"
+    conda activate "$REPO_ENV_NAME"
 }
 
 DEACTIVATE_REPO_ENV() {
-    if [ -n "${VIRTUAL_ENV:-}" ]; then
-        deactivate || true
-    fi
+    conda deactivate || true
 }
 
-echo "Created isolated repo virtualenv at $REPO_VENV"
+echo "Created conda repo environment: $REPO_ENV_NAME"
 
 ###############################################
-# 3. Install repo/test dependencies INSIDE isolated env only
+# 3. Install repo/test dependencies INSIDE isolated conda env only
 ###############################################
 ACTIVATE_REPO_ENV
-echo "Installing repository dependencies inside isolated environment..."
+echo "Installing repository dependencies inside isolated conda environment..."
 
-# Always modernize pip/setuptools/wheel first for Python 3.12 compatibility
+# Always modernize pip/setuptools/wheel first
 python -m pip install --upgrade pip setuptools wheel || true
 
 # Detect whether repo appears to need heavy scientific stack
@@ -68,13 +84,10 @@ fi
 # Minimal test tooling always
 python -m pip install pytest pytest-xvfb hypothesis || true
 
-# If heavy scientific deps appear needed, install them with versions compatible w/ Py 3.12 wheels
+# If heavy scientific deps appear needed, install them with conda for better compatibility
 if [ "$NEEDS_SCI" = "1" ]; then
-    echo "Installing scientific stack..."
-    # Use wheels (avoid forcing older numpy that triggers source build on 3.12)
-    python -m pip install "numpy>=1.26.0,<2.0" || true
-    python -m pip install cython || true
-    python -m pip install "scipy>=1.11.0" "matplotlib>=3.7.0" pyerfa attrs PyYAML extension-helpers || true
+    echo "Installing scientific stack via conda..."
+    conda install -c conda-forge numpy scipy matplotlib cython pyerfa pyyaml -y || true
     # Astropy-specific pytest helpers only if astropy detected
     if grep -E -i -q 'astropy' requirements.txt pyproject.toml setup.cfg 2>/dev/null; then
          python -m pip install pytest-astropy pytest-arraydiff pytest-doctestplus pytest-openfiles pytest-remotedata || true
@@ -109,13 +122,13 @@ fi
 # Record python path for logs
 echo "Repo env Python: $(which python)" >&2
 
-# Provide a wrapper script to run test commands inside repo env (for potential aider use)
+# Provide a wrapper script to run test commands inside repo conda env
 WRAPPER=/workspace/run_tests.sh
 cat > "$WRAPPER" <<EOS
 #!/bin/bash
 set -e
-REPO_VENV="$REPO_VENV"
-source "\$REPO_VENV/bin/activate"
+eval "\$(conda shell.bash hook)"
+conda activate "$REPO_ENV_NAME"
 bash -c "\$@"
 EOS
 chmod +x "$WRAPPER"
@@ -171,7 +184,7 @@ run_tests_inside_repo_env() {
 }
 
 # 5. Prepare logging & test execution (baseline + post-fix)
-#    Aider runs OUTSIDE the repo virtualenv so its deps don't leak in.
+#    Switch back to base environment for aider execution
 DEACTIVATE_REPO_ENV || true
 
 # Run tests, capture logs (tests themselves activate env via function/wrapper)
@@ -188,17 +201,20 @@ echo "Problem Statement: $PROBLEM_STATEMENT" >> $TEST_LOG
 echo "================================" >> $TEST_LOG
 
 # Run baseline tests inside isolated repo environment
-echo "Running test command BEFORE aider (isolated env): $TEST_CMD"
+echo "Running test command BEFORE aider (isolated conda env): $TEST_CMD"
 echo "=== BEFORE AIDER TEST RESULTS ===" >> $TEST_LOG
 run_tests_inside_repo_env >> $TEST_LOG 2>&1
 echo "=== END BEFORE AIDER TEST RESULTS ===" >> $TEST_LOG
 
-# Require local editable aider-genius CLI (aider) and avoid fallback to global aider
+# Activate aider-genius environment for running aider
+conda activate aider-genius
+
+# Check if aider-genius CLI is available
 if command -v jac-coder &> /dev/null; then
     AIDER_CMD="jac-coder"
     GENIUS_MODE="--genius"
 else
-    echo "Error: local aider-genius CLI (jac-coder) not found in PATH. Ensure editable install succeeded." >> $TEST_LOG
+    echo "Error: aider-genius CLI (jac-coder) not found in aider-genius conda environment." >> $TEST_LOG
     echo "Aborting aider phase to avoid using global/pip aider." >> $TEST_LOG
     AIDER_CMD=""
     GENIUS_MODE=""
@@ -222,9 +238,9 @@ if [ -n "$AIDER_CMD" ]; then
         echo "Running $AIDER_CMD with genius mode..." >> $AIDER_LOG
         echo "Task: $AIDER_PROMPT" >> $AIDER_LOG
         
-    # Use aider with genius mode for enhanced AI capabilities
-    MODEL_NAME="${AIDER_MODEL:-gpt-4o}"
-    $AIDER_CMD $GENIUS_MODE --yes --auto-commits --model "$MODEL_NAME" --message "$AIDER_PROMPT" --no-suggest-shell-commands . >> $AIDER_LOG 2>&1 || true
+        # Use aider with genius mode for enhanced AI capabilities
+        MODEL_NAME="${AIDER_MODEL:-gpt-4o}"
+        $AIDER_CMD $GENIUS_MODE --yes --auto-commits --model "$MODEL_NAME" --message "$AIDER_PROMPT" --no-suggest-shell-commands . >> $AIDER_LOG 2>&1 || true
         
         # Check if aider made any changes
         if git diff --quiet; then
@@ -237,7 +253,7 @@ if [ -n "$AIDER_CMD" ]; then
             echo "=== END AIDER GENERATED DIFF ===" >> $TEST_LOG
             
             # Run tests AFTER aider to see if it fixed the issue
-            echo "=== Running tests AFTER aider patch (isolated env) ===" >> $TEST_LOG
+            echo "=== Running tests AFTER aider patch (isolated conda env) ===" >> $TEST_LOG
             echo "Running test command AFTER aider: $TEST_CMD" >> $TEST_LOG
             run_tests_inside_repo_env >> $TEST_LOG 2>&1
             echo "=== END AFTER AIDER TEST RESULTS ===" >> $TEST_LOG
@@ -246,7 +262,7 @@ if [ -n "$AIDER_CMD" ]; then
         echo "No problem statement provided, skipping aider" >> $TEST_LOG
     fi
 else
-    echo "Warning: Aider not found in PATH" >> $TEST_LOG
+    echo "Warning: Aider not found in aider-genius conda environment" >> $TEST_LOG
 fi
 
 echo "=== Test execution completed ===" >> $TEST_LOG
