@@ -26,7 +26,8 @@ COPY aider-genius/ /tmp/aider-genius/
 RUN cd /tmp/aider-genius && \
     SETUPTOOLS_SCM_PRETEND_VERSION=0.86.1 python -m pip install -e . && \
     pip install jaclang byllm && \
-    pip install -r requirements.txt
+    pip install -r requirements.txt && \
+    pip install mcp
 
 # Disable aider self-update/version checks inside the container for reproducibility
 ENV AIDER_NO_AUTO_UPDATE=1 \

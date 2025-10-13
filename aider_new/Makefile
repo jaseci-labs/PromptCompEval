@@ -1,7 +1,8 @@
-# Makefile for Aider Environment Management
+# Makefile for Aider run utilities (aider_new)
 
 BENCHMARK := ../benchmarks/aider-genius
 ENV_NAME := aider
+PYTHON := python3
 PYTHON_VERSION := 3.12
 
 # Default target
@@ -12,12 +13,10 @@ help:
 	@echo "  purge_env        - Remove the conda environment"
 	@echo "  check_env        - Check if conda environment exists"
 	@echo "  install_req      - Install requirements in existing environment"
+	@echo "  run              - Run the full experiment pipeline (run_exp.py)"
+	@echo "  run_one          - Run a single instance via run_test.sh (set REPO_DIR, COMMIT, INSTANCE_ID)"
+	@echo "  clean_outputs    - Remove generated outputs/logs"
 	@echo "  data_import      - Run data_import.py in conda environment"
-	@echo "  build_docker     - Build Docker image for SWE-bench environment"
-	@echo "  run_docker_entry - Run all entries from test_data.json"
-	@echo "  clean_docker     - Remove the Docker image"
-	@echo "  test_setup       - Test Docker automation setup"
-	@echo "  docker_help      - Show Docker automation help"
 	@echo "  help             - Show this help message"
 
 # Check if conda environment exists
@@ -78,6 +77,7 @@ purge_env:
 	fi
 
 # Install requirements in existing environment
+
 .PHONY: install_req
 install_req: check_env
 	@echo "Installing requirements from $(BENCHMARK)/requirements.txt"
@@ -90,11 +90,11 @@ install_req: check_env
 			exit 1; \
 		fi; \
 	else \
-		echo "Error: requirements.txt not found at $(BENCHMARK)/requirements.txt"; \
-		exit 1; \
+		echo "Warning: requirements.txt not found at $(BENCHMARK)/requirements.txt"; \
 	fi
 
-	conda run -n $(ENV_NAME) pip install datasets evaluate transformers
+	# Additional tooling commonly used by scripts
+	conda run -n $(ENV_NAME) pip install --no-input datasets evaluate transformers || true
 
 # Activate conda environment
 .PHONY: activate_env
@@ -107,32 +107,32 @@ activate_env: check_env
 .PHONY: data_import
 data_import:
 	@echo "Running data_import.py in conda environment: $(ENV_NAME)"
-	conda run -n $(ENV_NAME) python ./data_import.py
+	conda run -n $(ENV_NAME) $(PYTHON) ./data_import.py
+
+.PHONY: run
+run:
+	@echo "Running full experiment pipeline (run_exp.py)..."
+	$(PYTHON) run_exp.py
+
+.PHONY: run_one
+# Usage:
+#  make run_one INSTANCE_ID=<id>                 # run the entry from test_data.json via run_exp.py
+#  make run_one REPO_DIR=/path COMMIT=<sha> INSTANCE_ID=<id>  # run single repo directly via run_test.sh
+run_one:
+	@if [ -n "$(INSTANCE_ID)" ] && [ -z "$(REPO_DIR)" ]; then \
+		$(PYTHON) run_exp.py --instance "$(INSTANCE_ID)"; \
+	else \
+		if [ -z "$(REPO_DIR)" ] || [ -z "$(COMMIT)" ] || [ -z "$(INSTANCE_ID)" ]; then \
+			echo "Usage: make run_one INSTANCE_ID=<id>  OR  make run_one REPO_DIR=/path COMMIT=<sha> INSTANCE_ID=<id>"; exit 1; \
+		fi; \
+		OUT_DIR=outputs/$(INSTANCE_ID); mkdir -p $$OUT_DIR; \
+		bash run_test.sh "$(REPO_DIR)" "$(COMMIT)" "$(INSTANCE_ID)" "$$OUT_DIR"; \
+	fi
+
+.PHONY: clean_outputs
+clean_outputs:
+	@echo "Removing outputs/ directory..."
+	rm -rf outputs || true
 
 # Docker automation targets
-.PHONY: build_docker
-build_docker:
-	@echo "Building Docker image for SWE-bench environment..."
-	python run_entry.py --build
-
-.PHONY: run_docker_entry
-run_docker_entry:
-	@echo "Running Docker entries from test_data.json..."
-	python run_entry.py
-
-.PHONY: clean_docker
-clean_docker:
-	@echo "Removing Docker image..."
-	docker rmi swebench-env || true
-
-.PHONY: docker_help
-docker_help:
-	@echo "Docker automation commands:"
-	@echo "  build_docker     - Build the Docker image with aider installed"
-	@echo "  run_docker_entry - Run all entries from test_data.json"
-	@echo "  clean_docker     - Remove the Docker image"
-
-.PHONY: test_setup
-test_setup:
-	@echo "Testing Docker automation setup..."
-	./test_setup.sh
+# (Docker automation targets removed — this Makefile focuses on local runs)
