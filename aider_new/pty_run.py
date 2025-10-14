@@ -23,10 +23,10 @@ import errno
 import signal
 
 START_MARKERS = [
-    b"Genius Agent",
-    b"Advanced AI-Powered Pair Programming",
-    b"Using gpt-",
-    b"Aider v",
+    b"Genius Agent - Phase: Planning",  # Wait for planning phase to start
+    b"Analyzing repository and creating task graph",  # Alternative marker
+    b"\n\n> ",  # The input prompt appears as newline newline > space
+    b"\r\n\r\n> ",  # Windows-style line endings
 ]
 DONE_MARKERS = [
     b"Genius Agent - Phase: Done",

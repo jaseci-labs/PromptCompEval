@@ -114,6 +114,8 @@ if [ "$(uname)" = "Darwin" ] && command -v osascript >/dev/null 2>&1; then
         CMD_PREFIX+=$(printf "%q" "$_elem")
         CMD_PREFIX+=" "
     done
+    # Trim trailing space
+    CMD_PREFIX="${CMD_PREFIX% }"
 
     # Remove any existing wrapper (avoid stale scripts) and write the wrapper that will run inside the new Terminal window.
     rm -f "$WRAPPER_SCRIPT" || true
@@ -141,10 +143,33 @@ else
     echo "Repository directory '${REPO_DIR}' not found; running in current directory"
 fi
 CMD='__CMD_PLACEHOLDER__'
-# When running in Terminal.app (already has a PTY), run aider directly and pass task via stdin
-# Read the task and pipe it into aider
-echo "Running aider interactively in Terminal (has PTY)..."
-cat "${TASK_FILE}" | eval "${CMD} --genius --yes --auto-commits --no-suggest-shell-commands --no-gitignore ."
+# Display the task prominently for the user to paste
+echo ""
+echo "=========================================="
+echo "TASK TO PASTE AT THE > PROMPT:"
+echo "=========================================="
+cat "${TASK_FILE}"
+echo ""
+echo "=========================================="
+echo ""
+echo "Starting aider in genius mode..."
+echo "When you see the > prompt, paste the task above and press Enter."
+echo ""
+
+# Run aider interactively - user will paste the task at the prompt
+echo "Starting aider in genius mode..."
+echo ""
+
+# Activate conda environment and run aider directly
+set +e  # Don't exit on error
+eval "$(conda shell.bash hook)"
+conda activate aider
+python -m aider.main --genius
+AIDER_EXIT_CODE=$?
+set -e
+
+echo ""
+echo "DEBUG: Aider exited with code: $AIDER_EXIT_CODE"
 echo
 echo "Aider process exited. Inspect the repo/commits. Close this window to continue the pipeline."
 # keep an interactive shell so user can inspect before closing
@@ -187,46 +212,35 @@ PY
         echo "osascript NOT found; cannot open Terminal.app" >> "$RUN_LOG"
     fi
 
-    # Ask Terminal.app to open a new window and run the wrapper, and capture the tab reference
-    TAB_INFO=$(osascript <<APPLESCRIPT
+    # Ask Terminal.app to open a new window and run the wrapper
+    # Let Terminal.app handle TTY setup naturally
+    osascript <<APPLESCRIPT
 tell application "Terminal"
     activate
-    set newTab to do script "bash '${WRAPPER_SCRIPT}'"
-    return id of newTab
+    do script "bash '${WRAPPER_SCRIPT}'"
 end tell
 APPLESCRIPT
-)
     
-    echo "Terminal tab created: $TAB_INFO" >> "$RUN_LOG"
+    echo "Terminal window opened for wrapper: $WRAPPER_SCRIPT" >> "$RUN_LOG"
     
-    # Poll until the Terminal tab is closed (busy state changes to false and then tab disappears)
+    # Poll until the wrapper script process exits
     echo "Waiting for interactive Terminal to be closed by user..."
+    echo "  [Instance: ${INSTANCE_ID}] Terminal window opened. Close the window when done to continue." >&2
+    
+    # Wait for the wrapper script to finish running
+    # The wrapper ends with "exec $SHELL -l" so it stays open until the user closes it
+    # We'll check if the wrapper process is still running
     while true; do
-        # Check if the tab still exists in Terminal
-        TAB_EXISTS=$(osascript <<APPLESCRIPT 2>/dev/null
-tell application "Terminal"
-    set tabFound to false
-    repeat with w in windows
-        repeat with t in tabs of w
-            try
-                if id of t is equal to ${TAB_INFO} then
-                    set tabFound to true
-                    exit repeat
-                end if
-            end try
-        end repeat
-        if tabFound then exit repeat
-    end repeat
-    return tabFound
-end tell
-APPLESCRIPT
-) || TAB_EXISTS="false"
-        
-        if [ "$TAB_EXISTS" != "true" ]; then
-            echo "Terminal tab closed, continuing..." >> "$RUN_LOG"
+        # Check if any bash process is running our wrapper script
+        if pgrep -f "${WRAPPER_SCRIPT}" > /dev/null 2>&1; then
+            # Still running
+            sleep 2
+        else
+            # Process exited, which means user closed the terminal or wrapper finished
+            echo "Terminal process exited, continuing..." >> "$RUN_LOG"
+            echo "  [Instance: ${INSTANCE_ID}] Terminal closed. Continuing to next entry..." >&2
             break
         fi
-        sleep 2
     done
 
 else
@@ -273,6 +287,12 @@ EXPECT
     fi
 fi
 
+
+# Clean up generated wrapper scripts before capturing diff
+if [ -f "$WRAPPER_SCRIPT" ]; then
+    rm -f "$WRAPPER_SCRIPT" || true
+    echo "Removed wrapper script: $WRAPPER_SCRIPT" >> "$RUN_LOG"
+fi
 
 # If there are uncommitted changes, capture git diff
 if ! git diff --quiet; then
