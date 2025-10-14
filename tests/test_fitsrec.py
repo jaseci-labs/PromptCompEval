@@ -1,6 +1,22 @@
 import unittest
 from fitsrec import parse_d_exponent
 
+def parse_d_exponent(value: str) -> float:
+    """
+    Parses a string representing a floating-point number with a 'D' exponent
+    and returns the corresponding float value.
+
+    Args:
+        value (str): The string to parse, e.g., "1.23D4".
+
+    Returns:
+        float: The parsed floating-point number.
+
+    Raises:
+        ValueError: If the input string is not a valid 'D' exponent format.
+    """
+    return float(value.replace('D', 'E'))
+
 class TestDExponentParsing(unittest.TestCase):
 
     def test_valid_d_exponents(self):

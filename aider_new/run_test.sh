@@ -143,17 +143,29 @@ else
     echo "Repository directory '${REPO_DIR}' not found; running in current directory"
 fi
 CMD='__CMD_PLACEHOLDER__'
-# Display the task prominently for the user to paste
+# Create a single-line version for clipboard
+ONELINE_FILE="${TASK_FILE}.oneline"
+# Convert ALL line endings (both \r\n and \n) to spaces
+cat "${TASK_FILE}" | tr '\r\n' '  ' > "$ONELINE_FILE"
+
 echo ""
 echo "=========================================="
-echo "TASK TO PASTE AT THE > PROMPT:"
+echo "TASK (full text - showing first 10 lines):"
 echo "=========================================="
-cat "${TASK_FILE}"
+head -10 "${TASK_FILE}"
 echo ""
 echo "=========================================="
 echo ""
-echo "Starting aider in genius mode..."
-echo "When you see the > prompt, paste the task above and press Enter."
+echo "Single-line version for copy-paste:"
+cat "$ONELINE_FILE"
+echo ""
+echo "=========================================="
+echo ""
+echo "Copying single-line version to clipboard..."
+cat "$ONELINE_FILE" | pbcopy
+echo "✓ Done! Paste at aider > prompt and press Enter"
+echo ""
+echo "=========================================="
 echo ""
 
 # Run aider interactively - user will paste the task at the prompt
@@ -289,10 +301,11 @@ fi
 
 
 # Clean up generated wrapper scripts before capturing diff
-if [ -f "$WRAPPER_SCRIPT" ]; then
-    rm -f "$WRAPPER_SCRIPT" || true
-    echo "Removed wrapper script: $WRAPPER_SCRIPT" >> "$RUN_LOG"
-fi
+# TEMPORARILY DISABLED - keep wrapper for debugging
+# if [ -f "$WRAPPER_SCRIPT" ]; then
+#     rm -f "$WRAPPER_SCRIPT" || true
+#     echo "Removed wrapper script: $WRAPPER_SCRIPT" >> "$RUN_LOG"
+# fi
 
 # If there are uncommitted changes, capture git diff
 if ! git diff --quiet; then

@@ -1,5 +1,6 @@
 from datasets import load_dataset
 import json
+from aider_new.fits_handler import read_fits_file
 
 # Login using e.g. `huggingface-cli login` to access this dataset
 ds = load_dataset("princeton-nlp/SWE-bench_Lite")
