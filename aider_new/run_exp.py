@@ -60,9 +60,19 @@ def run_cmd(cmd, cwd=None, env=None, capture_output=False):
 
 def clone_repo(repo_full: str, dest: Path):
     if dest.exists():
-        # assume it's a git dir; fetch
-        run_cmd(["git", "-C", str(dest), "fetch", "--all", "--depth", "1"], capture_output=True)
+        # Check if it's actually a valid git repo
+        git_dir = dest / ".git"
+        if git_dir.exists():
+            # It's a git repo; fetch all to get specific commits
+            run_cmd(["git", "-C", str(dest), "fetch", "--all"], capture_output=True)
+        else:
+            # Directory exists but not a git repo; remove and clone fresh
+            print(f"Directory {dest} exists but is not a git repo. Removing and cloning fresh...")
+            shutil.rmtree(dest)
+            # Clone without depth limitation so we can checkout specific commits
+            run_cmd(["git", "clone", f"https://github.com/{repo_full}.git", str(dest)])
     else:
+        # Clone without depth limitation so we can checkout specific commits
         run_cmd(["git", "clone", f"https://github.com/{repo_full}.git", str(dest)])
 
 
