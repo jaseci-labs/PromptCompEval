@@ -15,7 +15,7 @@ help:
 	@echo "  install_req      - Install requirements in existing environment"
 	@echo "  run              - Run the full experiment pipeline (run_exp.py)"
 	@echo "  run_one          - Run a single instance via run_test.sh (set REPO_DIR, COMMIT, INSTANCE_ID)"
-	@echo "  clean_outputs    - Remove generated outputs/logs"
+	@echo "  clean            - Remove generated outputs/logs"
 	@echo "  data_import      - Run data_import.py in conda environment"
 	@echo "  help             - Show this help message"
 
@@ -129,8 +129,8 @@ run_one:
 		bash run_test.sh "$(REPO_DIR)" "$(COMMIT)" "$(INSTANCE_ID)" "$$OUT_DIR"; \
 	fi
 
-.PHONY: clean_outputs
-clean_outputs:
+.PHONY: clean
+clean:
 	@echo "Removing outputs/ directory..."
 	rm -rf outputs || true
 
