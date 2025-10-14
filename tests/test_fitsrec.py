@@ -16,6 +16,12 @@ class TestDExponentParsing(unittest.TestCase):
         self.assertAlmostEqual(parse_d_exponent("1.0D-1"), 0.1)
         self.assertAlmostEqual(parse_d_exponent("1.0D+1"), 10.0)
 
+    def test_d_exponent_replacement(self):
+        # Test that 'D' exponent is correctly replaced and parsed
+        self.assertAlmostEqual(parse_d_exponent("1.23D4"), 1.23e4)
+        self.assertAlmostEqual(parse_d_exponent("-1.23D-4"), -1.23e-4)
+        self.assertAlmostEqual(parse_d_exponent("0.0D0"), 0.0)
+
     def test_invalid_d_exponents(self):
         # Test invalid D exponent formats
         with self.assertRaises(ValueError):
