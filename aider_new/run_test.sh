@@ -90,10 +90,9 @@ fi
 AIDER_LOG_FILE="${LOG_PREFIX}.aider.log"
 DIFF_FILE="${LOG_PREFIX}.diff"
 
-# Read problem content and pass via --genius-task to avoid interactive stdin cancellation
+# Read problem content (preserve newlines)
 TASK_CONTENT=""
 if [ -f "$AIDER_INPUT_FILE" ]; then
-    # read file content preserving newlines
     TASK_CONTENT=$(cat "$AIDER_INPUT_FILE") || TASK_CONTENT=""
 fi
 
@@ -101,149 +100,178 @@ echo "--- TASK (truncated 1024 chars) ---" >> "$RUN_LOG"
 echo "${TASK_CONTENT:0:1024}" >> "$RUN_LOG"
 echo "--- END TASK ---" >> "$RUN_LOG"
 
-# # If expect is installed, spawn aider in a pty and send the task after startup
-# if command -v expect >/dev/null 2>&1; then
-#     EXPECT_SCRIPT="${OUT_DIR}/${INSTANCE_ID}.send_task.exp"
-#     cat > "$EXPECT_SCRIPT" <<'EXPECT'
-# #!/usr/bin/expect -f
-# set timeout 1800
-# set aide_cmd [lindex $argv 0]
-# set aide_args [lindex $argv 1]
-# set task_file [lindex $argv 2]
+# Log the resolved AIDER command for debugging
+echo "AIDER_CMD resolved: ${AIDER_CMD[*]}" >> "$RUN_LOG" || true
 
-# # spawn the aider process (command and args passed as single strings)
-# spawn -noecho $aide_cmd {*}$aide_args
+# If on macOS, open a new Terminal.app window and run an interactive wrapper script
+if [ "$(uname)" = "Darwin" ] && command -v osascript >/dev/null 2>&1; then
+    WRAPPER_SCRIPT="${OUT_DIR}/${INSTANCE_ID}.launch.sh"
 
-# # wait for an initial startup marker before sending the task
-# expect {
-#     -re {Genius Agent} { }
-#     -re {Advanced AI-Powered Pair Programming} { }
-#     timeout { }
-# }
+    # Build a safely-escaped command prefix from AIDER_CMD array
+    CMD_PREFIX=""
+    for _elem in "${AIDER_CMD[@]}"; do
+        # shell-escape each element
+        CMD_PREFIX+=$(printf "%q" "$_elem")
+        CMD_PREFIX+=" "
+    done
 
-# # read the task file content
-# set fp [open $task_file r]
-# set task [read $fp]
-# close $fp
+    # Remove any existing wrapper (avoid stale scripts) and write the wrapper that will run inside the new Terminal window.
+    rm -f "$WRAPPER_SCRIPT" || true
+    # Use printf so we can safely insert parent-time values (INSTANCE_ID,
+    # AIDER_INPUT_FILE, CMD_PREFIX) while leaving the runtime CMD variable
+    # escaped (written as \${CMD}) so the parent shell doesn't expand it.
+    cat > "$WRAPPER_SCRIPT" <<'WRAPPER'
+#!/usr/bin/env bash
+set -euo pipefail
+INSTANCE_ID='__INSTANCE_ID_PLACEHOLDER__'
+TASK_FILE='__TASK_FILE_PLACEHOLDER__'
+REPO_DIR='__REPO_DIR_PLACEHOLDER__'
+printf '\033]0;%s\007' "AIDER:${INSTANCE_ID}"
+echo "===== AIDER interactive session: ${INSTANCE_ID} ====="
+echo "Task (first 1024 chars):"
+head -c 1024 "${TASK_FILE}" || true
+echo
+echo "Launching aider (interactive). When done, close this window to allow the experiment to continue."
+echo
+# change to the repository directory so aider runs with a git repo
+if [ -n "${REPO_DIR}" ] && [ -d "${REPO_DIR}" ]; then
+    cd "${REPO_DIR}" || true
+    echo "Changed directory to ${REPO_DIR}"
+else
+    echo "Repository directory '${REPO_DIR}' not found; running in current directory"
+fi
+CMD='__CMD_PLACEHOLDER__'
+# When running in Terminal.app (already has a PTY), run aider directly and pass task via stdin
+# Read the task and pipe it into aider
+echo "Running aider interactively in Terminal (has PTY)..."
+cat "${TASK_FILE}" | eval "${CMD} --genius --yes --auto-commits --no-suggest-shell-commands --no-gitignore ."
+echo
+echo "Aider process exited. Inspect the repo/commits. Close this window to continue the pipeline."
+# keep an interactive shell so user can inspect before closing
+exec "$SHELL" -l
+WRAPPER
 
-# # send the task (followed by a newline)
-# send -- "$task\r"
+    # Now replace placeholders with the actual safe values
+    # Use sed to substitute; CMD_PREFIX may contain single quotes, so we'll
+    # replace __CMD_PLACEHOLDER__ using a temporary file and printf
+    # Safely replace placeholders using python to avoid complex shell quoting
+    # Compute absolute path to pty_run.py relative to this script
+    SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+    PTY_RUN_PATH="$SCRIPT_DIR/pty_run.py"
+    python3 - "$WRAPPER_SCRIPT" "${INSTANCE_ID}" "${AIDER_INPUT_FILE}" "${CMD_PREFIX}" "${REPO_DIR}" "$PTY_RUN_PATH" <<'PY'
+import sys
+path = sys.argv[1]
+inst = sys.argv[2]
+taskf = sys.argv[3]
+cmd = sys.argv[4]
+repod = sys.argv[5]
+ptyrun = sys.argv[6]
+with open(path, 'r', encoding='utf-8') as f:
+    s = f.read()
+s = s.replace('__INSTANCE_ID_PLACEHOLDER__', inst)
+s = s.replace('__TASK_FILE_PLACEHOLDER__', taskf)
+s = s.replace('__CMD_PLACEHOLDER__', cmd)
+s = s.replace('__REPO_DIR_PLACEHOLDER__', repod)
+s = s.replace('__PTY_RUN_PLACEHOLDER__', ptyrun)
+with open(path, 'w', encoding='utf-8') as f:
+    f.write(s)
+PY
 
-# # Wait for the Genius Agent completion marker, EOF, or timeout
-# expect {
-#     -re {Genius Agent - Phase: Done} { }
-#     eof { }
-#     timeout { }
-# }
+    chmod +x "$WRAPPER_SCRIPT"
+    echo "WROTE WRAPPER: $WRAPPER_SCRIPT (size=$(stat -f%z "$WRAPPER_SCRIPT" 2>/dev/null || stat -c%s "$WRAPPER_SCRIPT" 2>/dev/null || echo 'unknown'))" >> "$RUN_LOG" || true
 
-# # After completion is observed (or timeout/EOF), send the exit command to terminate cleanly
-# send -- "/exit\r"
+    # Log osascript availability and wrapper path
+    if command -v osascript >/dev/null 2>&1; then
+        echo "osascript found, launching Terminal with wrapper: $WRAPPER_SCRIPT" >> "$RUN_LOG"
+    else
+        echo "osascript NOT found; cannot open Terminal.app" >> "$RUN_LOG"
+    fi
 
-# # wait for the process to exit
-# expect eof
-# EXPECT
-#     chmod +x "$EXPECT_SCRIPT"
-#     # Build args: AIDER_CMD (first element) and rest as a single string of args
-#     AIDER_BIN="${AIDER_CMD[0]}"
-#     # reconstruct args for expect (everything after the first element)
-#     AIDER_ARGS=""
-#     for i in "${AIDER_CMD[@]:1}"; do
-#         AIDER_ARGS+=" $i"
-#     done
-#     AIDER_ARGS+=" --genius --yes --auto-commits --no-suggest-shell-commands --no-gitignore ."
-#     # run expect and capture output
-#     expect -f "$EXPECT_SCRIPT" "$AIDER_BIN" "$AIDER_ARGS" "$AIDER_INPUT_FILE" > "$AIDER_LOG_FILE" 2>&1 || true
-# else
-#     # fallback: pass task via --genius-task
-#     "${AIDER_CMD[@]}" --genius --genius-task "$TASK_CONTENT" --yes --auto-commits --no-suggest-shell-commands . > "$AIDER_LOG_FILE" 2>&1 || true
-# fi
+    # Ask Terminal.app to open a new window and run the wrapper, and capture the tab reference
+    TAB_INFO=$(osascript <<APPLESCRIPT
+tell application "Terminal"
+    activate
+    set newTab to do script "bash '${WRAPPER_SCRIPT}'"
+    return id of newTab
+end tell
+APPLESCRIPT
+)
+    
+    echo "Terminal tab created: $TAB_INFO" >> "$RUN_LOG"
+    
+    # Poll until the Terminal tab is closed (busy state changes to false and then tab disappears)
+    echo "Waiting for interactive Terminal to be closed by user..."
+    while true; do
+        # Check if the tab still exists in Terminal
+        TAB_EXISTS=$(osascript <<APPLESCRIPT 2>/dev/null
+tell application "Terminal"
+    set tabFound to false
+    repeat with w in windows
+        repeat with t in tabs of w
+            try
+                if id of t is equal to ${TAB_INFO} then
+                    set tabFound to true
+                    exit repeat
+                end if
+            end try
+        end repeat
+        if tabFound then exit repeat
+    end repeat
+    return tabFound
+end tell
+APPLESCRIPT
+) || TAB_EXISTS="false"
+        
+        if [ "$TAB_EXISTS" != "true" ]; then
+            echo "Terminal tab closed, continuing..." >> "$RUN_LOG"
+            break
+        fi
+        sleep 2
+    done
 
-# If expect is installed, spawn aider in a pty and send the task after startup
-# if command -v expect >/dev/null 2>&1; then
-#     EXPECT_SCRIPT="${OUT_DIR}/${INSTANCE_ID}.send_task.exp"
-#     cat > "$EXPECT_SCRIPT" <<'EXPECT'
-# #!/usr/bin/expect -f
-# set timeout 1800
-# # first arg is the binary, rest (1..n-1) are aide args, final arg is the task file
-# if { $argc < 2 } {
-#     puts stderr "usage: $argv0 <aide_bin> <aide_args...> <task_file>"
-#     exit 2
-# }
-
-# set aide_cmd [lindex $argv 0]
-# set task_file [lindex $argv end]
-# set aide_args [lrange $argv 1 end-1]
-
-# # spawn the aider process inside a pty with its args
-# spawn -noecho $aide_cmd {*}$aide_args
-
-# # wait for an initial startup marker before sending the task
-# expect {
-#     -re {Genius Agent} { }
-#     -re {Advanced AI-Powered Pair Programming} { }
-#     -re {Using gpt-} { }        ;# fallback marker
-#     timeout { }
-# }
-
-# # read the task file content
-# set fp [open $task_file r]
-# set task [read $fp]
-# close $fp
-
-# # send the task (followed by a newline)
-# send -- "$task\r"
-
-# # Wait for done; if cancelled, try resending task once
-# set resent 0
-# expect {
-#     -re {Genius Agent - Phase: Done} { }
-#     -re {Task input cancelled by user} {
-#         # if { $resent == 0 } {
-#         #     incr resent
-#         #     send -- "$task\r"
-#         #     exp_continue
-#         # }
-#     }
-#     timeout { }
-#     eof { }
-# }
-
-# # Attempt graceful exit
-# send -- "/exit\r"
-
-# # wait for the process to exit (short grace period)
-# set timeout 10
-# expect eof
-# EXPECT
-#     chmod +x "$EXPECT_SCRIPT"
-
-#     # AIDER_BIN is the command (first element), the rest are real args (preserve array)
-#     AIDER_BIN="${AIDER_CMD[0]}"
-
-#     # Call expect passing aide binary followed by each argument separately, then the extra flags, then the task file.
-#     expect -f "$EXPECT_SCRIPT" \
-#         "$AIDER_BIN" \
-#         "${AIDER_CMD[@]:1}" \
-#         --genius --yes --auto-commits --no-suggest-shell-commands --no-gitignore . \
-#         "$AIDER_INPUT_FILE" > "$AIDER_LOG_FILE" 2>&1 || true
-# else
-    # Fallback: use Python PTY runner to keep interactive TTY even without expect
-    # Requires pty_run.py in the same directory as this script
-    PTY_RUN="$(dirname "$0")/pty_run.py"
-    if command -v python3 >/dev/null 2>&1 && [ -f "$PTY_RUN" ]; then
-        # Build the full command line: AIDER_CMD args + our flags + repo path
-        # Note: pass them after -- so pty_run treats them as the child command
-        python3 "$PTY_RUN" \
-            --task-file "$AIDER_INPUT_FILE" \
-            --startup-timeout 60 \
-            --done-timeout 1800 \
-            -- "${AIDER_CMD[@]}" --genius --yes --auto-commits --no-suggest-shell-commands --no-gitignore . \
-            > "$AIDER_LOG_FILE" 2>&1 || true
+else
+    # Non-macOS or no osascript available: fallback to non-interactive behavior
+    # Try expect/pty paths as before; prefer a simple --genius-task invocation
+    if command -v expect >/dev/null 2>&1; then
+        # Use expect-based pty runner to supply the task; keep existing lightweight path
+        EXPECT_SCRIPT="${OUT_DIR}/${INSTANCE_ID}.send_task.exp"
+        cat > "$EXPECT_SCRIPT" <<'EXPECT'
+#!/usr/bin/expect -f
+set timeout 1800
+set aide_cmd [lindex $argv 0]
+set aide_args [lindex $argv 1]
+set task_file [lindex $argv 2]
+spawn -noecho $aide_cmd {*}$aide_args
+expect {
+    -re {Genius Agent} { }
+    -re {Advanced AI-Powered Pair Programming} { }
+    timeout { }
+}
+set fp [open $task_file r]
+set task [read $fp]
+close $fp
+send -- "$task\r"
+expect {
+    -re {Genius Agent - Phase: Done} { }
+    eof { }
+    timeout { }
+}
+send -- "/exit\r"
+expect eof
+EXPECT
+        chmod +x "$EXPECT_SCRIPT"
+        AIDER_BIN="${AIDER_CMD[0]}"
+        AIDER_ARGS=""
+        for i in "${AIDER_CMD[@]:1}"; do
+            AIDER_ARGS+=" $i"
+        done
+        AIDER_ARGS+=" --genius --yes --auto-commits --no-suggest-shell-commands --no-gitignore ."
+        expect -f "$EXPECT_SCRIPT" "$AIDER_BIN" "$AIDER_ARGS" "$AIDER_INPUT_FILE" > "$AIDER_LOG_FILE" 2>&1 || true
     else
         # Last resort (non-interactive): pass task via --genius-task
         "${AIDER_CMD[@]}" --genius --genius-task "$TASK_CONTENT" --yes --auto-commits --no-suggest-shell-commands . > "$AIDER_LOG_FILE" 2>&1 || true
     fi
-# fi
+fi
 
 
 # If there are uncommitted changes, capture git diff
