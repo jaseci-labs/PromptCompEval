@@ -96,6 +96,12 @@ install_req: check_env
 	# Additional tooling commonly used by scripts
 	conda run -n $(ENV_NAME) pip install --no-input datasets evaluate transformers || true
 
+	cd $(BENCHMARK) && \
+    SETUPTOOLS_SCM_PRETEND_VERSION=0.86.1 python -m pip install -e . && \
+    pip install jaclang byllm && \
+    pip install -r requirements.txt && \
+    pip install mcp
+
 # Activate conda environment
 .PHONY: activate_env
 activate_env: check_env
