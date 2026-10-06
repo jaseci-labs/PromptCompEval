@@ -1,0 +1,1002 @@
+[
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the legal drinking age be lowered or raised?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is social media more harmful or helpful for communication?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the death penalty be abolished?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Does affirmative action still have a place in modern society?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should college education be free for all students?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is homeschooling a better option than traditional schooling?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is censorship necessary in today's society?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should genetically modified foods be banned?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is there a need for stricter gun control laws?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Assess the view that scientific research should not be constrained by ethical concerns."
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is the concept of beauty subjective or objective?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should schools teach financial literacy?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is censorship ever justified in the arts?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the use of animals in medical research be banned?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is the idea of a utopian society achievable?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the use of plastic be banned to protect the environment?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it ethical to use performance-enhancing drugs in sports?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should all drugs be decriminalized?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Can fantasy books and films offer anything more than an escape from reality?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should public transport be free for everyone?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it possible to have a truly equal society?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government regulate the content of video games?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it ethical to use robots in warfare?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Can we still encourage technological advancement when it outpaces ethics?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is homeschooling a viable option for children's education?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the use of nuclear weapons be banned?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is cultural appropriation ever acceptable?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should we implement a universal basic income?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is the use of standardized tests an effective way to measure student learning?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "‘Artificial intelligence is more dangerous than useful.’ Do you agree?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it ethical to use animals for testing and experimentation?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government invest more in renewable energy sources?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Animals should never be used for entertainment purposes.' Do you agree?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government regulate the sale and consumption of sugary drinks?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it ethical to use AI in decision-making processes?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government regulate the use of drones?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is online learning a better option than traditional classroom learning?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government provide free healthcare for all citizens?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it ethical to use genetically modified crops for food production?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "‘Entertainment, not truth, is the priority of the media today.’ Comment."
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government regulate the use of plastic packaging?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "‘The world today values appearance over substance.’ Is this a fair comment?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it ethical to use AI in the criminal justice system?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government regulate the use of facial recognition technology?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Is it ethical to use animals for military purposes?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "The government should regulate the use of personal data by tech companies.' Discuss."
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Should the government regulate the use of social media for political campaigns?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Assess the view that the government regulate the use of autonomous vehicles."
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "Migration cannot be justified since it creates social problems. Do you agree?"
+  },
+  {
+    "Category": "Argumentative",
+    "Definition": "You are tasked to discuss the following ethical question by explaining arguments for different positions.",
+    "Prompt": "How far is failure an essential part of success?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a blog post about the benefits of meditation for mental health."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a proof that there are infinitely many primes, with every line that rhymes?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a story about a person who is stranded on a deserted island and must find a way to survive and escape."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a letter to your future self, discussing your hopes, dreams, and aspirations."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a character who is dealing with a mental health issue, and explore how they cope with their struggles."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a descriptive paragraph about a haunted house."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a poem about the changing of seasons?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a short story about a time traveler who accidentally goes back to the prehistoric era."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a dialogue between two characters who have opposing viewpoints on a controversial topic."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a personal essay about a difficult decision you had to make and the lessons you learned from it."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a play about a group of friends who discover a mysterious object and must work together to uncover its secrets?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a character analysis of a literary figure of your choice."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a story from the perspective of a tree that has been standing in the same spot for hundreds of years."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a song about the importance of friendship?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a dialogue between two people who are stranded in a hot air balloon in the middle of nowhere."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a character analysis of a villain from a movie or book and explore their motivations."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a short story about a person who wakes up one day with the ability to time travel."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a character who is dealing with a physical disability and explore how they navigate the challenges they face."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a descriptive paragraph about a bustling city street."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a poem about the beauty of nature?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a story from the perspective of a dog who is on a mission to find their lost owner."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a dialogue between two people who are trying to decide whether or not to start a business together."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a personal essay about a memorable experience you had while traveling."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a play about a family that must come together to overcome a tragedy?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a story about a group of astronauts who discover a new planet that is inhabited by intelligent life."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a rap about the importance of education?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a dialogue between two people who have very different cultural backgrounds and explore how they learn from each other."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a script for a short film about a person who is trying to find their way in a new city and meets someone who changes their life."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Imagine a world where everyone has a superpower, but the protagonist is the only one without one. Write a story about their journey to find their place in society."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a character who is dealing with addiction and explore how they try to overcome it."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a descriptive paragraph about a snowy winter landscape."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a poem about the value of hard work?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a story from the perspective of a bird that is migrating to a new location."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a character analysis of a hero from a movie or book and explore what makes them heroic."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a personal essay about a time when you had to overcome a fear."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Can you write a play about a group of strangers who are stranded in a remote location and must work together to survive?"
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a descriptive paragraph about a place that brings you a sense of peace and calmness."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Compose a letter from a parent to their child who is struggling with anxiety, offering advice and support."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a dialogue between two people who have completely opposite political views, but must find a way to work together."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a story about a person who discovers they have a hidden talent and must decide whether to pursue it or stick with their current path."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a script for a short film about a person who wakes up with no memory of the previous day and must piece together what happened."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a short story about a person who is cursed with immortality and must watch everyone they love grow old and die."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Compose a poem about the concept of time and how it affects our lives."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a script for a short film about a person who is trying to find their purpose in life but keeps getting sidetracked by distractions."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Create a character who is dealing with a chronic illness and explore their journey to acceptance and healing."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a descriptive paragraph about a person you admire and why they inspire you."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Compose a letter from a friend to another friend who is going through a difficult time, offering words of encouragement and support."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a story about a person who discovers a hidden room in their house and uncovers a secret about their family's past."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Write a short story about a person who wakes up one day and finds that they can hear other people's thoughts."
+  },
+  {
+    "Category": "Creative",
+    "Definition": "You are tasked to demonstrate your creative writing skills for the following question.",
+    "Prompt": "Compose a song about the struggle of addiction and the path to recovery."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a formal email to a potential business partner proposing a joint venture?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a supporting letter to Kasturba Gandhi for Electron, a subatomic particle as a US presidential candidate by Mahatma Gandhi."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a social media post promoting a new product or service, using concise and compelling language to capture the reader's attention."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a presentation for a business meeting, outlining the key points and supporting data."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a thank-you letter to a client or customer, expressing your appreciation for their business and highlighting any future opportunities for collaboration."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a memo to your team outlining the new policies for remote work, including expectations, guidelines, and communication protocols."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a cover letter for a job application, highlighting my relevant skills and experience and explaining why I am a good fit for the position?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a proposal for a new project or initiative, including a description of the problem or opportunity, the proposed solution, the budget, and the expected outcomes."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a press release announcing a new product launch, emphasizing the unique features and benefits of the product and highlighting any media coverage or endorsements?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a white paper exploring the current trends and future prospects of the renewable energy industry, including data and analysis to support your arguments."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a thank-you note to a business partner or client, expressing appreciation for their collaboration and highlighting the positive outcomes of the project or partnership?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a proposal for a marketing campaign to raise awareness about mental health issues, targeting a specific demographic and using appropriate language and tone."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write an executive summary for a business plan, summarizing the key elements of the plan and highlighting the potential for growth and profitability?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a technical manual for a software application, including instructions for installation, configuration, and troubleshooting, using clear and concise language."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a letter of recommendation for a former colleague or employee, highlighting their strengths, achievements, and potential for future success?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a blog post discussing the benefits and drawbacks of remote work, drawing on personal experience and research to support your arguments."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a speech for a graduation ceremony, inspiring and motivating the graduates to pursue their dreams and make a positive impact on the world?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a product description for an e-commerce website, using persuasive language and highlighting the unique features and benefits of the product to attract potential customers."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a grant proposal for a non-profit organization, outlining the goals, objectives, and methods for a specific project and demonstrating its potential impact and feasibility?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a customer service email responding to a customer complaint, addressing their concerns and providing a satisfactory resolution while maintaining a professional and courteous tone."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a research paper discussing the ethical implications of artificial intelligence and its impact on society, using relevant sources and presenting a balanced perspective?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a script for a podcast episode discussing the history and cultural significance of a specific cuisine, incorporating personal anecdotes and interviews with experts to engage the audience."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a personal statement for a college or graduate school application, highlighting my academic achievements, extracurricular activities, and career goals while demonstrating my unique qualities and strengths?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a user manual for a household appliance, providing step-by-step instructions for its operation, maintenance, and troubleshooting, using clear and simple language."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a script for a training video on workplace safety, covering the common hazards and best practices for preventing accidents and injuries?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me draft a professional email to a client regarding a delay in project delivery, explaining the reasons and proposing a revised timeline?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a comparative analysis of two competing products or services in the same category, highlighting the strengths and weaknesses of each and providing recommendations for improvement or differentiation."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me compose a LinkedIn message to a recruiter or hiring manager, introducing myself and expressing interest in a job opportunity, while highlighting my relevant skills and experience?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a policy brief on a current issue or challenge affecting a specific industry or sector, summarizing the key facts, trends, and implications, and proposing policy options or solutions."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a creative brief for a graphic designer or marketing team, outlining the goals, audience, message, and visual elements for an advertising campaign or branding project?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a strategic plan for a non-profit organization, identifying the mission, vision, and goals of the organization, and outlining the strategies and tactics for achieving them, including fundraising, outreach, and partnerships."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a product review for an online retailer, sharing my honest and detailed impressions of a product I have purchased, including the pros and cons, the features and benefits, and the overall value and satisfaction."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a customer feedback survey for a restaurant, asking about the quality of food, service, ambiance, and overall experience, and using clear and concise language to ensure accurate and meaningful responses."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write an opinion editorial for a newspaper or magazine, taking a stance on a controversial issue and using persuasive language and evidence to support your argument and engage the readers."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a manual for a new employee, introducing them to the company culture, policies, procedures, and benefits, and providing guidance and resources for their onboarding and training."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me draft a proposal for a research project, outlining the research questions, methods, and outcomes, and demonstrating the significance and relevance of the study for the field and the wider community."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a script for a webinar or online presentation, engaging the audience with interactive elements, visuals, and storytelling, and conveying complex or technical information in an accessible and engaging way."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a bio for a social media profile or website, highlighting my achievements, skills, and personality, and using a tone and style that reflects my brand and target audience."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a newsletter for a charity or non-profit organization, sharing updates, success stories, and calls to action with the donors, volunteers, and supporters, and expressing gratitude for their contributions and impact."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a white paper on a technology or innovation, explaining its features, benefits, and potential applications, and addressing the concerns and challenges related to its adoption and implementation?"
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a case study analyzing a failed business strategy or innovation, describing the reasons and consequences of the failure, and identifying the lessons learned and the implications for future decision-making."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a proposal for a community service project, involving volunteers and stakeholders in addressing a specific social or environmental issue, and demonstrating the impact and sustainability of the project."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a script for a podcast episode discussing a controversial or sensitive topic, using empathy, respect, and evidence to explore different perspectives and promote constructive dialogue."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a detailed report analyzing market trends and consumer behavior for a specific industry or product."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a fundraising appeal for a charity or non-profit organization, using emotional appeals, statistics, and stories to inspire generosity and support for a worthy cause or initiative."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a script for a training video on customer service, covering the best practices and strategies for handling customer inquiries, complaints, and feedback, and using examples and scenarios to illustrate the concepts."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a book review for a literary magazine or website, analyzing the plot, characters, themes, and style of a novel or non-fiction book, and providing a critical and insightful evaluation of its strengths and weaknesses."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Can you help me write a proposal for a business partnership or collaboration, outlining the potential benefits and opportunities for both parties, and demonstrating the alignment of values, goals, and capabilities."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a persuasive memo to your team, advocating for a new policy or initiative."
+  },
+  {
+    "Category": "Professional",
+    "Definition": "You are tasked to demonstrate your writing skills in professional or work settings for the following question.",
+    "Prompt": "Write a speech for a keynote address at a technology conference, discussing the future of artificial intelligence."
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I improve my time management skills?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "My writing skills are not very good. What should I do?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you explain why the sky is blue?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How do I make vegan pancakes?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What does it mean if my dog cannot sleep?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some tips for staying motivated while working from home?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I improve my public speaking skills?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some ways to reduce stress and anxiety?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you recommend some healthy meal options for someone on a budget?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How do I choose the right career path for me?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some effective study techniques for exams?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you suggest some ways to stay organized and productive?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I'm a college student and I'm feeling overwhelmed with my workload. What are some study strategies I can use to be more productive?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I improve my communication skills in my personal relationships?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you recommend some strategies for saving money and budgeting effectively?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What should I do if I am experiencing frequent panic attacks?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How do I prepare for a job interview?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you recommend some resources for learning a new language?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How do I start a successful side hustle or small business?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some ways to build self-confidence and improve self-esteem?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I find a mentor in my industry or field of interest?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What should I do if I'm experiencing discrimination or harassment at work or in my personal life?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some tips for maintaining a healthy work-life balance?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some ways to cope with the loss of a loved one?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I'm planning to travel solo for the first time. What are some safety tips I should keep in mind?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I want to start investing my money, but I don't know where to begin. What should I do?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I'm struggling with addiction. What are some resources or strategies for overcoming my addiction and seeking help?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I'm a new parent and I'm struggling with sleep deprivation. What are some strategies for getting more sleep?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some strategies for dealing with a difficult coworker?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I mend a broken friendship?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I'm having trouble making friends in a new city. How can I meet new people and build a social network?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I'm experiencing writer's block. What are some tips for getting past it and finding inspiration?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "I want to start a fitness routine, but I'm not sure what type of exercise is best for me. How can I choose the right workout program?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How does the internet work?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What is the difference between a virus and a bacteria?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you explain how vaccines work?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are the different types of renewable energy?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How does the stock market work?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you explain how the human brain processes information?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What is the process for creating a new invention or product?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How do computers process information and carry out tasks?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "Can you explain the basics of quantum mechanics?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I support a friend or family member who is struggling with addiction?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I manage my time effectively while balancing school and work?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some tips for navigating a long-distance relationship?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What should I do if I suspect my partner is cheating on me?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I improve my cooking skills and prepare healthier meals at home?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What should I do if I witness someone being harassed or discriminated against?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "What are some strategies for managing chronic pain?"
+  },
+  {
+    "Category": "Informative",
+    "Definition": "You are tasked to give helpful advice, information, or explanations for the following question.",
+    "Prompt": "How can I educate myself and others about mental health and wellness?"
+  }
+]
