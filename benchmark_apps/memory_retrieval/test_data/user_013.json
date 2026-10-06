@@ -1,0 +1,117 @@
+{
+  "user_id": "user_013",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 12, 2025, in Ann Arbor, Rachel worked late in a university lab, surrounded by open books and lab equipment.",
+      "when": "2025-01-12",
+      "who": ["Rachel"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Late-night lab study."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 8, 2025, in Chicago, Rachel presented a poster at a research symposium, standing beside her charts while attendees asked questions.",
+      "when": "2025-02-08",
+      "who": ["Rachel"],
+      "where": ["Chicago, IL"],
+      "what": "Research symposium poster presentation."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 19, 2025, in Boston, Rachel met with her advisor Dr. Chen at a coffee shop, reviewing edits to her manuscript.",
+      "when": "2025-03-19",
+      "who": ["Rachel", "Dr. Chen"],
+      "where": ["Boston, MA"],
+      "what": "Advisor meeting."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 14, 2025, in New York, Rachel attended a keynote lecture at a science conference, jotting notes in her notebook.",
+      "when": "2025-04-14",
+      "who": ["Rachel"],
+      "where": ["New York, NY"],
+      "what": "Conference keynote."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 22, 2025, in Washington D.C., Rachel joined a panel discussion on climate data, speaking alongside three other researchers.",
+      "when": "2025-05-22",
+      "who": ["Rachel"],
+      "where": ["Washington, D.C."],
+      "what": "Panel discussion on climate research."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 30, 2025, in Seattle, Rachel collaborated with Omar in a university library, their laptops side by side as they built a dataset.",
+      "when": "2025-06-30",
+      "who": ["Rachel", "Omar"],
+      "where": ["Seattle, WA"],
+      "what": "Collaborative dataset work."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 15, 2025, in Toronto, Rachel co-authored a workshop talk with Julia, both standing at a podium with slides projected behind them.",
+      "when": "2025-07-15",
+      "who": ["Rachel", "Julia"],
+      "where": ["Toronto, Canada"],
+      "what": "Workshop presentation."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 9, 2025, in San Francisco, Rachel attended a tech conference, networking with researchers in the expo hall.",
+      "when": "2025-09-09",
+      "who": ["Rachel"],
+      "where": ["San Francisco, CA"],
+      "what": "Networking at tech conference."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 16, 2025, in London, Rachel presented her paper at an international conference, pointing to slides while the audience took notes.",
+      "when": "2025-10-16",
+      "who": ["Rachel"],
+      "where": ["London, UK"],
+      "what": "International conference paper presentation."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 20, 2025, in Ann Arbor, Rachel celebrated the acceptance of her journal article with friends at a café.",
+      "when": "2025-12-20",
+      "who": ["Rachel", "Omar", "Julia"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Celebration after journal acceptance."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "What milestones marked Rachel's academic progress across 2025?",
+      "answer_gold": "She presented a poster in Chicago, joined a climate panel in Washington D.C., co-presented a workshop in Toronto, gave a paper talk in London, and celebrated her journal article acceptance in Ann Arbor.",
+      "evidence": ["m02", "m05", "m07", "m09", "m10"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which collaborators worked with Rachel on research projects, and in what contexts?",
+      "answer_gold": "Dr. Chen advised her manuscript in Boston, Omar collaborated on dataset building in Seattle and later joined the café celebration, and Julia co-presented a workshop in Toronto and celebrated with her.",
+      "evidence": ["m03", "m06", "m07", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "What international experiences did Rachel have in 2025?",
+      "answer_gold": "She traveled to Toronto for a workshop and to London for an international paper presentation.",
+      "evidence": ["m07", "m09"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which activities reflect Rachel as an attendee versus as a presenter?",
+      "answer_gold": "As an attendee, she listened to a keynote in New York and networked in San Francisco. As a presenter, she gave talks in Chicago, Washington D.C., Toronto, and London.",
+      "evidence": ["m04", "m08", "m02", "m05", "m07", "m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best captures Rachel's academic success, and why?",
+      "answer_gold": "The December celebration in Ann Arbor, because it marked her journal article's acceptance, a key academic milestone.",
+      "evidence": ["m10"]
+    }
+  ]
+}

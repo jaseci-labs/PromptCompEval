@@ -1,0 +1,117 @@
+{
+  "user_id": "user_010",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 3, 2025, in Ann Arbor, Liam trained at the gym, lifting weights while wearing headphones.",
+      "when": "2025-01-03",
+      "who": ["Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Gym training."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 15, 2025, in Chicago, Liam played basketball with friends on an indoor court, caught mid-jump shot.",
+      "when": "2025-02-15",
+      "who": ["Liam", "Noah", "David"],
+      "where": ["Chicago, IL"],
+      "what": "Basketball game."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 22, 2025, in Boston, Liam ran along the Charles River with his running club, bundled up against the chilly wind.",
+      "when": "2025-03-22",
+      "who": ["Liam", "Sophia"],
+      "where": ["Boston, MA"],
+      "what": "Running with club."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 14, 2025, in New York, Liam joined teammates at a soccer match, captured celebrating a goal on the field.",
+      "when": "2025-04-14",
+      "who": ["Liam", "Omar", "Raj"],
+      "where": ["New York, NY"],
+      "what": "Soccer match."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 19, 2025, in Denver, Liam hiked with his cousin Julia, standing at a mountain overlook with wide views.",
+      "when": "2025-05-19",
+      "who": ["Liam", "Julia"],
+      "where": ["Denver, CO"],
+      "what": "Mountain hike."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 10, 2025, in Seattle, Liam joined a cycling group, riding along the waterfront on a clear morning.",
+      "when": "2025-06-10",
+      "who": ["Liam", "Rachel"],
+      "where": ["Seattle, WA"],
+      "what": "Group cycling."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 7, 2025, in Toronto, Liam competed in a summer triathlon, running toward the finish line in his race bib.",
+      "when": "2025-07-07",
+      "who": ["Liam"],
+      "where": ["Toronto, Canada"],
+      "what": "Triathlon competition."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 3, 2025, in Austin, Liam played tennis with Sophia, shaking hands at the net after the match.",
+      "when": "2025-09-03",
+      "who": ["Liam", "Sophia"],
+      "where": ["Austin, TX"],
+      "what": "Tennis match."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 12, 2025, in San Francisco, Liam joined friends for a marathon, crossing the Golden Gate Bridge with the crowd.",
+      "when": "2025-10-12",
+      "who": ["Liam", "Maya", "Noah"],
+      "where": ["San Francisco, CA"],
+      "what": "Marathon race."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 28, 2025, in Miami, Liam relaxed after a beach volleyball game, sitting with teammates in the sand at sunset.",
+      "when": "2025-12-28",
+      "who": ["Liam", "David", "Raj"],
+      "where": ["Miami, FL"],
+      "what": "Beach volleyball."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which sports did Liam play competitively versus casually?",
+      "answer_gold": "Competitively: soccer, triathlon, marathon. Casually: basketball, tennis, volleyball, cycling.",
+      "evidence": ["m02", "m04", "m07", "m09", "m08", "m10", "m06"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What outdoor activities show Liam's love for nature?",
+      "answer_gold": "Hiking in Denver, cycling in Seattle, triathlon in Toronto, marathon in San Francisco, and beach volleyball in Miami.",
+      "evidence": ["m05", "m06", "m07", "m09", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which friends joined Liam in different sports?",
+      "answer_gold": "Noah and David in basketball, Sophia in running and tennis, Omar and Raj in soccer, Julia on a hike, Rachel in cycling, Maya and Noah in a marathon, and Raj again in volleyball.",
+      "evidence": ["m02", "m03", "m04", "m05", "m06", "m08", "m09", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which international trip involved competition, and what event was it?",
+      "answer_gold": "Toronto for a summer triathlon.",
+      "evidence": ["m07"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best reflects a festive sports atmosphere?",
+      "answer_gold": "The beach volleyball game in Miami with teammates at sunset.",
+      "evidence": ["m10"]
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "user_id": "user_016",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 9, 2025, in Ann Arbor, Omar sketched startup ideas on a whiteboard at a co-working space, sipping coffee beside his laptop.",
+      "when": "2025-01-09",
+      "who": ["Omar"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Brainstorming startup ideas."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 22, 2025, in Chicago, Omar pitched his startup at a student entrepreneurship competition, standing on stage with slides projected behind him.",
+      "when": "2025-02-22",
+      "who": ["Omar"],
+      "where": ["Chicago, IL"],
+      "what": "Startup pitch competition."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 14, 2025, in Boston, Omar met with his mentor Julia at a café, discussing product strategy over notebooks and coffee.",
+      "when": "2025-03-14",
+      "who": ["Omar", "Julia"],
+      "where": ["Boston, MA"],
+      "what": "Mentorship meeting."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 27, 2025, in New York, Omar attended a venture capital networking event, shaking hands with potential investors in a crowded hall.",
+      "when": "2025-04-27",
+      "who": ["Omar"],
+      "where": ["New York, NY"],
+      "what": "Investor networking."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 19, 2025, in Austin, Omar and his co-founder Maya participated in a hackathon, coding side by side with sticky notes covering their desks.",
+      "when": "2025-05-19",
+      "who": ["Omar", "Maya"],
+      "where": ["Austin, TX"],
+      "what": "Hackathon with co-founder."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 24, 2025, in San Francisco, Omar demoed his product prototype at a startup accelerator showcase, answering questions from the audience.",
+      "when": "2025-06-24",
+      "who": ["Omar"],
+      "where": ["San Francisco, CA"],
+      "what": "Accelerator demo day."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 30, 2025, in Seattle, Omar held a small team retreat with Maya and Raj, hiking in the mountains before planning next steps around a campfire.",
+      "when": "2025-07-30",
+      "who": ["Omar", "Maya", "Raj"],
+      "where": ["Seattle, WA"],
+      "what": "Startup team retreat."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 3, 2025, in Toronto, Omar pitched his startup at an international innovation summit, holding a microphone before a large audience.",
+      "when": "2025-09-03",
+      "who": ["Omar"],
+      "where": ["Toronto, Canada"],
+      "what": "Innovation summit pitch."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 15, 2025, in London, Omar joined a roundtable with other founders, speaking about scaling startups in global markets.",
+      "when": "2025-10-15",
+      "who": ["Omar"],
+      "where": ["London, UK"],
+      "what": "Founder roundtable."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 10, 2025, in Ann Arbor, Omar celebrated his startup’s first product launch party with his team, raising a toast as confetti fell.",
+      "when": "2025-12-10",
+      "who": ["Omar", "Maya", "Raj", "Julia"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Product launch celebration."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "What milestones marked Omar’s startup journey through 2025?",
+      "answer_gold": "He brainstormed ideas, pitched in competitions, built a prototype, joined an accelerator, pitched at an international summit, spoke in London, and ended with a product launch.",
+      "evidence": ["m01", "m02", "m06", "m08", "m09", "m10"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which collaborators supported Omar, and in what ways?",
+      "answer_gold": "Maya co-founded the startup and joined the hackathon and retreat, Raj joined the retreat and launch, and Julia mentored him and celebrated the launch.",
+      "evidence": ["m03", "m05", "m07", "m10"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which events involved Omar presenting to an audience?",
+      "answer_gold": "The student pitch in Chicago, demo day in San Francisco, summit pitch in Toronto, and roundtable in London.",
+      "evidence": ["m02", "m06", "m08", "m09"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which trips outside the U.S. did Omar take, and for what purpose?",
+      "answer_gold": "Toronto to pitch at an innovation summit and London to join a founder roundtable.",
+      "evidence": ["m08", "m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best reflects a celebratory success, and why?",
+      "answer_gold": "The product launch party in Ann Arbor, where Omar and his team toasted their achievement.",
+      "evidence": ["m10"]
+    }
+  ]
+}

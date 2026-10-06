@@ -1,0 +1,117 @@
+{
+  "user_id": "user_015",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 6, 2025, in Ann Arbor, Sarah helped her daughter Emma build a snowman in their backyard, both bundled up in bright scarves.",
+      "when": "2025-01-06",
+      "who": ["Sarah", "Emma"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Snow day with daughter."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 10, 2025, in Ann Arbor, Sarah baked heart-shaped cookies with her children for Valentine's Day, smiling as flour dusted the counter.",
+      "when": "2025-02-10",
+      "who": ["Sarah", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Valentine's baking at home."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 16, 2025, in Detroit, Sarah took her family to a children's museum, watching her kids explore science exhibits with excitement.",
+      "when": "2025-03-16",
+      "who": ["Sarah", "Emma", "Liam", "David"],
+      "where": ["Detroit, MI"],
+      "what": "Family museum visit."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 20, 2025, in Chicago, Sarah joined an Easter egg hunt at a local park, laughing as Emma found the golden egg.",
+      "when": "2025-04-20",
+      "who": ["Sarah", "Emma", "Liam"],
+      "where": ["Chicago, IL"],
+      "what": "Easter celebration."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 25, 2025, in Ann Arbor, Sarah gardened with her husband David, planting flowers while the kids watered the soil with toy cans.",
+      "when": "2025-05-25",
+      "who": ["Sarah", "David", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Family gardening day."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 29, 2025, in Traverse City, Sarah took her family to a cherry festival, everyone enjoying ice cream under summer sunshine.",
+      "when": "2025-06-29",
+      "who": ["Sarah", "David", "Emma", "Liam"],
+      "where": ["Traverse City, MI"],
+      "what": "Summer family trip."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 4, 2025, in Washington D.C., Sarah and her family watched fireworks by the reflecting pool, holding sparklers together.",
+      "when": "2025-07-04",
+      "who": ["Sarah", "David", "Emma", "Liam"],
+      "where": ["Washington, D.C."],
+      "what": "Fourth of July family outing."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 1, 2025, in Ann Arbor, Sarah walked her children to their first day of school, waving goodbye at the classroom door.",
+      "when": "2025-09-01",
+      "who": ["Sarah", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "First day of school."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 31, 2025, in Ann Arbor, Sarah dressed as a witch for Halloween while her kids wore superhero costumes, trick-or-treating around the block.",
+      "when": "2025-10-31",
+      "who": ["Sarah", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Halloween night with kids."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 24, 2025, in Ann Arbor, Sarah and her family decorated their Christmas tree together, hanging ornaments while soft music played in the background.",
+      "when": "2025-12-24",
+      "who": ["Sarah", "David", "Emma", "Liam"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Christmas Eve at home."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which holidays did Sarah celebrate with her family in 2025, and what did they do?",
+      "answer_gold": "Valentine's Day baking, Easter egg hunt, Fourth of July fireworks, Halloween costumes, and Christmas Eve decorating.",
+      "evidence": ["m02", "m04", "m07", "m09", "m10"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What outdoor family activities did Sarah and her children enjoy?",
+      "answer_gold": "Building a snowman, gardening, attending a cherry festival, and watching fireworks.",
+      "evidence": ["m01", "m05", "m06", "m07"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which events show Sarah supporting her children's learning or creativity?",
+      "answer_gold": "Visiting the children's museum and walking them to their first day of school.",
+      "evidence": ["m03", "m08"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "How do Sarah's family trips differ between winter and summer?",
+      "answer_gold": "Winter trips centered around indoor activities like baking and museum visits, while summer included festivals and fireworks.",
+      "evidence": ["m02", "m03", "m06", "m07"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best reflects a cozy family atmosphere, and why?",
+      "answer_gold": "Decorating the Christmas tree together on Christmas Eve, with music playing and family gathered in warmth.",
+      "evidence": ["m10"]
+    }
+  ]
+}

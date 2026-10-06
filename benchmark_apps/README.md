@@ -1,7 +1,12 @@
-# Benchmark Apps (Task Manager, Content Creator)
+# Benchmark Apps (Memory Retrieval, Task Manager, Content Creator)
 
-Evaluation datasets, runners, and raw outputs for two of the five benchmark
-applications in the SemText paper (Table 1). These were copied from an
+Evaluation datasets, runners, and raw outputs for three of the five benchmark
+applications in the SemText paper (Table 1).
+
+`memory_retrieval/test_data/` comes from this repo's `friendzone` branch
+(`99c29e1`), copied unchanged.
+
+The Task Manager and Content Creator folders were copied from an
 uncommitted/gitignored working tree of
 [jaseci-labs/Agentic-AI](https://github.com/jaseci-labs/Agentic-AI) (local clone
 at commit `6b450ac`) so they are version-controlled. Folder contents are
@@ -18,6 +23,12 @@ the paper's variants.
 
 ## Datasets
 
+- **Memory Retrieval:** `memory_retrieval/test_data/user_NNN.json` covers 20 users
+  (the paper uses 60). Each file has 10 `memories` (`memory_id`, `summary`, `when`,
+  `who`, `where`, `what`) and 5 `qa_pairs` (`qid`, `question`, `answer_gold`,
+  `evidence` = gold memory IDs), giving 100 queries in total. **Known issue:**
+  `user_004.json` is an exact duplicate of `user_005.json` (both have
+  `user_id: user_005`), so there are 19 unique users and 95 unique queries.
 - **Task Manager:** `generalized_synthetic_agent_data.json` with 220 queries
   (100 `task_handling`, 20 `task_summaries`, 100 `email_handling`). The same file
   is in each variant folder because the runners load it from the working directory.
@@ -34,8 +45,9 @@ the paper's variants.
 
 ## Not here yet
 
+- Memory Retrieval: the other 40 users / 200 queries, the runner, and the F1 scorer
 - PE implementation of Content Creator
-- LLM-as-a-judge scoring scripts for both apps
+- LLM-as-a-judge scoring scripts for Task Manager and Content Creator
 - Docstring variants (RQ4) and Content Creator ablation variants (RQ3)
 
 ## Running

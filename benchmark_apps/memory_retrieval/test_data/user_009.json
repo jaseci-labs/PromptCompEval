@@ -1,0 +1,117 @@
+{
+  "user_id": "user_009",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 20, 2025, in Ann Arbor, Maya painted in her small studio, brushes scattered around as sunlight fell across the canvas.",
+      "when": "2025-01-20",
+      "who": ["Maya"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Painting in studio."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 14, 2025, in New York, Maya visited a modern art museum with her friend Julia, pausing in front of a large installation.",
+      "when": "2025-02-14",
+      "who": ["Maya", "Julia"],
+      "where": ["New York, NY"],
+      "what": "Museum visit."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 11, 2025, in Paris, Maya posed by the Eiffel Tower with her brother Leo during a spring trip.",
+      "when": "2025-03-11",
+      "who": ["Maya", "Leo"],
+      "where": ["Paris, France"],
+      "what": "Paris sightseeing."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 25, 2025, in Rome, Maya sketched at an outdoor café table, holding a notebook with the Colosseum in view.",
+      "when": "2025-04-25",
+      "who": ["Maya"],
+      "where": ["Rome, Italy"],
+      "what": "Sketching while traveling."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 30, 2025, in Madrid, Maya visited a local market with Julia, buying fruit while street musicians played nearby.",
+      "when": "2025-05-30",
+      "who": ["Maya", "Julia"],
+      "where": ["Madrid, Spain"],
+      "what": "Market visit."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 18, 2025, in London, Maya attended a gallery opening with friends, holding a glass of wine in a crowded room.",
+      "when": "2025-06-18",
+      "who": ["Maya", "Rachel", "Omar"],
+      "where": ["London, UK"],
+      "what": "Gallery opening."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 24, 2025, in Berlin, Maya painted a mural with a local art collective, bright colors spreading across a wall.",
+      "when": "2025-07-24",
+      "who": ["Maya"],
+      "where": ["Berlin, Germany"],
+      "what": "Mural painting."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 8, 2025, in Tokyo, Maya joined a pottery class, shaping clay alongside Japanese artisans.",
+      "when": "2025-09-08",
+      "who": ["Maya"],
+      "where": ["Tokyo, Japan"],
+      "what": "Pottery workshop."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 29, 2025, in Sydney, Maya visited the Opera House with Leo, taking a photo on the harbor steps.",
+      "when": "2025-10-29",
+      "who": ["Maya", "Leo"],
+      "where": ["Sydney, Australia"],
+      "what": "Opera House visit."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 31, 2025, in Barcelona, Maya celebrated New Year's Eve at a plaza, surrounded by fireworks and cheering crowds.",
+      "when": "2025-12-31",
+      "who": ["Maya", "Julia"],
+      "where": ["Barcelona, Spain"],
+      "what": "New Year's Eve celebration."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Which forms of art did Maya practice during her travels?",
+      "answer_gold": "Painting in Ann Arbor and Berlin, sketching in Rome, and pottery in Tokyo.",
+      "evidence": ["m01", "m04", "m07", "m08"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which trips abroad did Maya take with family versus friends?",
+      "answer_gold": "With her brother Leo in Paris and Sydney, with Julia in Madrid and Barcelona, and with Rachel and Omar in London.",
+      "evidence": ["m03", "m05", "m09", "m10", "m06"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which memories show Maya connecting with local culture?",
+      "answer_gold": "Shopping at a Madrid market, painting a mural in Berlin, and shaping clay in a Tokyo pottery class.",
+      "evidence": ["m05", "m07", "m08"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which memory best reflects celebration, and what details highlight it?",
+      "answer_gold": "New Year's Eve in Barcelona, surrounded by fireworks and cheering crowds.",
+      "evidence": ["m10"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which continents did Maya visit in 2025?",
+      "answer_gold": "Europe (France, Italy, Spain, UK, Germany), Asia (Japan), and Australia (Sydney).",
+      "evidence": ["m03", "m04", "m05", "m06", "m07", "m08", "m09", "m10"]
+    }
+  ]
+}

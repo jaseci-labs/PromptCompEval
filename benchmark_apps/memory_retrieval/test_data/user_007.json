@@ -1,0 +1,117 @@
+{
+  "user_id": "user_007",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 11, 2025, in Ann Arbor, Sophia studied in the university library, laptop open beside stacks of textbooks.",
+      "when": "2025-01-11",
+      "who": ["Sophia"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Studying in library."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 6, 2025, in Chicago, Sophia attended a career fair with her classmate Daniel, both holding folders of résumés.",
+      "when": "2025-02-06",
+      "who": ["Sophia", "Daniel"],
+      "where": ["Chicago, IL"],
+      "what": "Career fair."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 9, 2025, in Boston, Sophia worked with a project team in a lab, discussing diagrams spread across a whiteboard.",
+      "when": "2025-03-09",
+      "who": ["Sophia", "Rachel", "Leo"],
+      "where": ["Boston, MA"],
+      "what": "Team project work."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 18, 2025, in New York, Sophia joined friends at a tech talk, captured while listening in an auditorium.",
+      "when": "2025-04-18",
+      "who": ["Sophia", "Maya", "Raj"],
+      "where": ["New York, NY"],
+      "what": "Tech talk event."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 12, 2025, in San Francisco, Sophia started her summer internship, standing in front of the office with a badge clipped to her shirt.",
+      "when": "2025-05-12",
+      "who": ["Sophia"],
+      "where": ["San Francisco, CA"],
+      "what": "Internship start."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 25, 2025, in San Francisco, Sophia worked with mentor Alex over coffee, reviewing notes on her laptop.",
+      "when": "2025-06-25",
+      "who": ["Sophia", "Alex"],
+      "where": ["San Francisco, CA"],
+      "what": "Mentorship meeting."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 30, 2025, in San Francisco, Sophia presented her project to a small group, standing by a projector screen.",
+      "when": "2025-07-30",
+      "who": ["Sophia", "Alex", "Rachel"],
+      "where": ["San Francisco, CA"],
+      "what": "Internship presentation."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 2, 2025, in Seattle, Sophia visited Pike Place Market with Daniel, holding a coffee cup in one hand.",
+      "when": "2025-09-02",
+      "who": ["Sophia", "Daniel"],
+      "where": ["Seattle, WA"],
+      "what": "Market visit."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 21, 2025, in Toronto, Sophia joined a university exchange trip, taking a group photo with classmates near the CN Tower.",
+      "when": "2025-10-21",
+      "who": ["Sophia", "Leo", "Maya"],
+      "where": ["Toronto, Canada"],
+      "what": "Exchange program trip."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 15, 2025, in Ann Arbor, Sophia celebrated the end of the semester with her study group, holding a slice of cake at a café.",
+      "when": "2025-12-15",
+      "who": ["Sophia", "Rachel", "Daniel"],
+      "where": ["Ann Arbor, MI"],
+      "what": "End-of-semester celebration."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "Who did Sophia work with on academic or internship projects?",
+      "answer_gold": "Rachel and Leo in Boston, Alex in San Francisco, and classmates during the Toronto trip.",
+      "evidence": ["m03", "m06", "m07", "m09"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "What milestones mark Sophia’s academic and professional growth?",
+      "answer_gold": "Attending a career fair, starting an internship, presenting her project, and going on an exchange trip.",
+      "evidence": ["m02", "m05", "m07", "m09"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Which memories involve food or drink, and what do they reflect?",
+      "answer_gold": "Coffee with mentor Alex, coffee at Pike Place Market, and cake with her study group — showing casual bonding moments.",
+      "evidence": ["m06", "m08", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which cities did Sophia travel to outside her home in Ann Arbor?",
+      "answer_gold": "Chicago, Boston, New York, San Francisco, Seattle, and Toronto.",
+      "evidence": ["m02", "m03", "m04", "m05", "m08", "m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which memory best reflects celebration, and what details indicate it?",
+      "answer_gold": "The café gathering in Ann Arbor with cake, marking the end of the semester.",
+      "evidence": ["m10"]
+    }
+  ]
+}

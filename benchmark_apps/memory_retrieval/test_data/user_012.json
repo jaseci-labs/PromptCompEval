@@ -1,0 +1,117 @@
+{
+  "user_id": "user_012",
+  "memories": [
+    {
+      "memory_id": "m01",
+      "summary": "On January 17, 2025, in Ann Arbor, Ethan practiced piano in a rehearsal room, sheet music spread across the stand under soft lighting.",
+      "when": "2025-01-17",
+      "who": ["Ethan"],
+      "where": ["Ann Arbor, MI"],
+      "what": "Solo piano rehearsal."
+    },
+    {
+      "memory_id": "m02",
+      "summary": "On February 9, 2025, in Chicago, Ethan attended a jazz club with his friend Olivia, tapping along as a saxophonist performed on stage.",
+      "when": "2025-02-09",
+      "who": ["Ethan", "Olivia"],
+      "where": ["Chicago, IL"],
+      "what": "Jazz night out."
+    },
+    {
+      "memory_id": "m03",
+      "summary": "On March 14, 2025, in New York, Ethan sang in a student choir concert at a university hall, standing among rows of performers in black attire.",
+      "when": "2025-03-14",
+      "who": ["Ethan"],
+      "where": ["New York, NY"],
+      "what": "Choir concert."
+    },
+    {
+      "memory_id": "m04",
+      "summary": "On April 19, 2025, in Boston, Ethan attended a symphony with his sister Julia, both seated in the balcony as violins played below.",
+      "when": "2025-04-19",
+      "who": ["Ethan", "Julia"],
+      "where": ["Boston, MA"],
+      "what": "Classical concert outing."
+    },
+    {
+      "memory_id": "m05",
+      "summary": "On May 23, 2025, in Austin, Ethan joined a street band performance, playing guitar while a small crowd gathered around.",
+      "when": "2025-05-23",
+      "who": ["Ethan"],
+      "where": ["Austin, TX"],
+      "what": "Street performance."
+    },
+    {
+      "memory_id": "m06",
+      "summary": "On June 15, 2025, in Nashville, Ethan recorded in a small studio with his friend Noah, headphones on as they layered guitar and vocals.",
+      "when": "2025-06-15",
+      "who": ["Ethan", "Noah"],
+      "where": ["Nashville, TN"],
+      "what": "Studio recording session."
+    },
+    {
+      "memory_id": "m07",
+      "summary": "On July 27, 2025, in Los Angeles, Ethan performed at an open mic night, standing with a guitar under bright spotlights.",
+      "when": "2025-07-27",
+      "who": ["Ethan"],
+      "where": ["Los Angeles, CA"],
+      "what": "Open mic performance."
+    },
+    {
+      "memory_id": "m08",
+      "summary": "On September 4, 2025, in Seattle, Ethan attended a music festival with Olivia and Raj, holding drinks while bands played across outdoor stages.",
+      "when": "2025-09-04",
+      "who": ["Ethan", "Olivia", "Raj"],
+      "where": ["Seattle, WA"],
+      "what": "Music festival."
+    },
+    {
+      "memory_id": "m09",
+      "summary": "On October 20, 2025, in Toronto, Ethan gave a piano recital, bowing to applause after finishing a classical piece.",
+      "when": "2025-10-20",
+      "who": ["Ethan"],
+      "where": ["Toronto, Canada"],
+      "what": "Piano recital."
+    },
+    {
+      "memory_id": "m10",
+      "summary": "On December 31, 2025, in New York, Ethan celebrated New Year's Eve at a concert in Times Square, cheering with friends as fireworks lit the sky.",
+      "when": "2025-12-31",
+      "who": ["Ethan", "Olivia", "Julia"],
+      "where": ["New York, NY"],
+      "what": "New Year's Eve concert celebration."
+    }
+  ],
+  "qa_pairs": [
+    {
+      "qid": "qa_001",
+      "question": "What shows Ethan's transition from student practice to public performances?",
+      "answer_gold": "He began with solo piano rehearsals in Ann Arbor, then joined choir concerts, street performances, open mics, and finally recitals and festivals.",
+      "evidence": ["m01", "m03", "m05", "m07", "m09"]
+    },
+    {
+      "qid": "qa_002",
+      "question": "Which cities did Ethan travel to for music-related experiences?",
+      "answer_gold": "Chicago, New York, Boston, Austin, Nashville, Los Angeles, Seattle, and Toronto.",
+      "evidence": ["m02", "m03", "m04", "m05", "m06", "m07", "m08", "m09"]
+    },
+    {
+      "qid": "qa_003",
+      "question": "Who accompanied Ethan in his music-related outings?",
+      "answer_gold": "Olivia at jazz club and festival, Julia at the symphony and New Year's Eve, Noah at the studio, and Raj at the festival.",
+      "evidence": ["m02", "m04", "m06", "m08", "m10"]
+    },
+    {
+      "qid": "qa_004",
+      "question": "Which memory reflects Ethan as a performer in a professional setting?",
+      "answer_gold": "His piano recital in Toronto, where he bowed to audience applause.",
+      "evidence": ["m09"]
+    },
+    {
+      "qid": "qa_005",
+      "question": "Which events highlight Ethan's enjoyment of music as an audience member rather than performer?",
+      "answer_gold": "The jazz club in Chicago, the symphony in Boston, the Seattle music festival, and New Year's Eve concert in New York.",
+      "evidence": ["m02", "m04", "m08", "m10"]
+    }
+  ]
+}
